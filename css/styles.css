@@ -823,3 +823,50 @@ footer {
     background-color: #004080;
     color: white;
 }
+
+
+
+/* ===================================================================================================================
+=================================================== */
+
+.style1 {
+    font-weight: bold;
+    font-family: "Arial Black";
+    font-size: x-small;
+}
+
+.style2 {
+    text-decoration: underline;
+}
+
+.style3 {
+    font-family: "Arial Black";
+}
+
+.style4 {
+    font-weight: bold;
+    font-family: "Arial Black";
+    font-size: x-small;
+}
+
+.style5 {
+    font-family: "Arial Black";
+    font-size: small;
+}
+
+.style6 {
+    font-size: small;
+}
+
+.header {
+    width: 100%;
+}
+
+.whiteback {
+    height: auto;
+}
+
+.title {
+    text-align: center;
+    margin-top: 10px;
+}

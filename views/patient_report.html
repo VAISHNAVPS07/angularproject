@@ -627,11 +627,509 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
+<div class="container">
+    <h2 class="text-center mb-4">Valve Information</h2>
+
+    <h5 class="section-title">Valve Details</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered" style="font-size: smaller; font-family: 'Arial Black', sans-serif;">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center">Mitral Valve</th>
+                    <th colspan="2" class="text-center">Aortic Valve</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Row 1: DT and PV -->
+                <tr>
+                    <td class="fw-bold">DT:</td>
+                    <td>
+                        <span id="lbldt"></span>
+                    </td>
+                    <td class="fw-bold">PV:</td>
+                    <td>
+                        <span id="lblpv"></span> m/s
+                    </td>
+                </tr>
+                <!-- Row 2: PV and MACS -->
+                <tr>
+                    <td class="fw-bold">PV:</td>
+                    <td>
+                        <span id="lblmitralpv"></span> m/s
+                    </td>
+                    <td class="fw-bold">MACS:</td>
+                    <td>
+                        <span id="lblaorticmacs"></span> cm
+                    </td>
+                </tr>
+                <!-- Row 3: MV-E and PPG -->
+                <tr>
+                    <td class="fw-bold">MV-E:</td>
+                    <td>
+                        <span id="lblmve"></span> m/s
+                    </td>
+                    <td class="fw-bold">PPG:</td>
+                    <td>
+                        <span id="lblappg"></span> mm
+                    </td>
+                </tr>
+                <!-- Row 4: MV-A and MPG -->
+                <tr>
+                    <td class="fw-bold">MV-A:</td>
+                    <td>
+                        <span id="lblmva"></span> ml
+                    </td>
+                    <td class="fw-bold">MPG:</td>
+                    <td>
+                        <span id="lblampg"></span> mm
+                    </td>
+                </tr>
+                <!-- Row 5: IVRT and ET -->
+                <tr>
+                    <td class="fw-bold">IVRT:</td>
+                    <td>
+                        <span id="lblivrt"></span> ml
+                    </td>
+                    <td class="fw-bold">ET:</td>
+                    <td>
+                        <span id="lblet"></span> ms
+                    </td>
+                </tr>
+                <!-- Row 6: IVCT and VTI -->
+                <tr>
+                    <td class="fw-bold">IVCT:</td>
+                    <td>
+                        <span id="lblivct"></span> ml
+                    </td>
+                    <td class="fw-bold">VTI:</td>
+                    <td>
+                        <span id="lblvti"></span> cm
+                    </td>
+                </tr>
+                <!-- Row 7: MVO by PHT and Prosthetic Valve -->
+                <tr>
+                    <td class="fw-bold">MVO by PHT:</td>
+                    <td>
+                        <span id="lblmvopht"></span> cm<sup>2</sup>
+                    </td>
+                    <td class="fw-bold">Prosthetic Valve:</td>
+                    <td>
+                        <span id="lblaorticprosthetic"></span>
+                    </td>
+                </tr>
+                <!-- Row 8: MVO by 2D ECHO -->
+                <tr>
+                    <td class="fw-bold">MVO by 2D ECHO:</td>
+                    <td>
+                        <span id="lblmvo2d"></span> cm<sup>2</sup>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Row 9: Prosthetic Valve -->
+                <tr>
+                    <td class="fw-bold">Prosthetic Valve:</td>
+                    <td>
+                        <span id="lblmitralprosthetic"></span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- ============================================
  =================================================
 ================================================-->
+<div class="container">
+    <h2 class="text-center mb-4">Tricuspid Valve Information</h2>
 
-    
-</body>
+    <h5 class="section-title">Tricuspid Valve Details</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center">Measurement</th>
+                    <th colspan="2" class="text-center">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="fw-bold" colspan="2">Tricuspid Valve</td>
+                    <td colspan="2" class="text-center">
+                        <span><b>Tricuspid Valve</b></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold" colspan="2">TRICUSPID ANNULUS DIMENSION</td>
+                    <td>
+                        <span id="lbltad"></span>
+                    </td>
+                    <td>
+                        <span id="lbltad1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">DT:</td>
+                    <td>
+                        <span id="lbltdt2">DT</span>
+                    </td>
+                    <td>
+                        <span id="lbltdt"></span>
+                    </td>
+                    <td>
+                        <span id="lbltdt1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">TRICUSPID VALVE AREA BY PHT:</td>
+                    <td>
+                        <span id="lbltva2">TRICUSPID VALVE AREA BY PHT</span>
+                    </td>
+                    <td>
+                        <span id="lbltva"></span>
+                    </td>
+                    <td>
+                        <span id="lbltva1">cm<sup>2</sup></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">PV:</td>
+                    <td>
+                        <span id="lbltpv">PV</span>
+                    </td>
+                    <td>
+                        <span id="lbltricuspidpv"></span>
+                    </td>
+                    <td>
+                        <span id="lbltricuspidpv1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">RV MPI:</td>
+                    <td>
+                        <span id="lblrvmpi2">RV MPI</span>
+                    </td>
+                    <td>
+                        <span id="lblrvmpi"></span>
+                    </td>
+                    <td>
+                        <span id="lblrvmpi1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">TV-E:</td>
+                    <td>
+                        <span id="lbltricuspidtve2">TV-E</span>
+                    </td>
+                    <td>
+                        <span id="lbltricuspidtve"></span>
+                    </td>
+                    <td>
+                        <span id="lbltricuspidtve1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">Prosthetic Valve:</td>
+                    <td colspan="3">
+                        <span id="lbltricuspidprosthetic"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">TV-A:</td>
+                    <td>
+                        <span id="lbltricuspidtva2">TV-A</span>
+                    </td>
+                    <td>
+                        <span id="lbltricuspidtva"></span>
+                    </td>
+                    <td>
+                        <span id="lbltricuspidtva1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">RVSP:</td>
+                    <td>
+                        <span id="lbltrvsp2">RVSP</span>
+                    </td>
+                    <td>
+                        <span id="lbltrvsp"></span>
+                    </td>
+                    <td>
+                        <span id="lbltrvsp1">+RAP mmHg</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
-</html>
+<!-- Bootstrap JS for Interactivity (Optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="container">
+    <h2 class="text-center mb-4">Pulmonary Valve Information</h2>
+
+    <h5 class="section-title">Pulmonary Valve Details</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center">Measurement</th>
+                    <th colspan="2" class="text-center">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="fw-bold" colspan="2">Pulmonary Valve</td>
+                    <td colspan="2" class="text-center">
+                        <span><b>Pulmonary Valve</b></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold" colspan="2">PULMONARY DIMENSION</td>
+                    <td>
+                        <span></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">PV:</td>
+                    <td>
+                        <span>PV</span>
+                    </td>
+                    <td>
+                        <span></span>
+                    </td>
+                    <td>
+                        <span>m/s</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">AT:</td>
+                    <td>
+                        <span>AT</span>
+                    </td>
+                    <td>
+                        <span></span>
+                    </td>
+                    <td>
+                        <span>ms</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">PPG:</td>
+                    <td>
+                        <span>PPG</span>
+                    </td>
+                    <td>
+                        <span></span>
+                    </td>
+                    <td>
+                        <span>mmHg</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">MPG:</td>
+                    <td>
+                        <span>MPG</span>
+                    </td>
+                    <td>
+                        <span></span>
+                    </td>
+                    <td>
+                        <span>mmHg</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">Prosthetic Valve:</td>
+                    <td colspan="3">
+                        <span></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">Pulmonary Annulus:</td>
+                    <td>
+                        <span>Pulmonary Annulus</span>
+                    </td>
+                    <td>
+                        <span></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">MPA:</td>
+                    <td>
+                        <span>MPA</span>
+                    </td>
+                    <td>
+                        <span></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">LPA:</td>
+                    <td>
+                        <span>LPA</span>
+                    </td>
+                    <td>
+                        <span></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">RPA:</td>
+                    <td>
+                        <span>RPA</span>
+                    </td>
+                    <td>
+                        <span></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">VELOCITY-LPA:</td>
+                    <td>
+                        <span>VELOCITY-LPA</span>
+                    </td>
+                    <td>
+                        <span></span>
+                    </td>
+                    <td>
+                        <span>m/s</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">VELOCITY-RPA:</td>
+                    <td>
+                        <span>VELOCITY-RPA</span>
+                    </td>
+                    <td>
+                        <span></span>
+                    </td>
+                    <td>
+                        <span>m/s</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Bootstrap JS for Interactivity (Optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<div class="container">
+    <h2 class="text-center mb-4">Pulmonary Venous Flow Information</h2>
+
+    <h5 class="section-title">Pulmonary Venous Flow Details</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center">Measurement</th>
+                    <th colspan="2" class="text-center">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="fw-bold" colspan="2">Pulmonary Venous Flow</td>
+                    <td colspan="2" class="text-center">
+                        <span><b>Pulmonary Venous Flow</b></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold" colspan="2">PULMONARY VEIN S</td>
+                    <td>
+                        <span id="pulmonaryVeinS"></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold" colspan="2">IVC-MAX/MIN</td>
+                    <td>
+                        <span id="ivcMaxMin"></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold" colspan="2">PULMONARY VEIN D</td>
+                    <td>
+                        <span id="pulmonaryVeinD"></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold" colspan="2">HEPATIC VEIN S</td>
+                    <td>
+                        <span id="hepaticVeinS"></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold" colspan="2">PULMONARY VEIN Ar</td>
+                    <td>
+                        <span id="pulmonaryVeinAr"></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold" colspan="2">HEPATIC VEIN D</td>
+                    <td>
+                        <span id="hepaticVeinD"></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold" colspan="2">PULMONARY VEIN Adur</td>
+                    <td>
+                        <span id="pulmonaryVeinAdur"></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold" colspan="2">REVERSAL FLOW VELOCITY</td>
+                    <td>
+                        <span id="reversalFlowVelocity"></span>
+                    </td>
+                    <td>
+                        <span>mm</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Bootstrap JS for Interactivity (Optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
