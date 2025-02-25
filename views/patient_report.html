@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Echocardiography Report</title>
+    <style type="text/css">
+        .style1 {
+            font-weight: bold;
+            font-family: "Arial Black";
+            font-size: x-small;
+        }
+
+        .style2 {
+            text-decoration: underline;
+        }
+
+        .style3 {
+            font-family: "Arial Black";
+        }
+
+        .style4 {
+            font-weight: bold;
+            font-family: "Arial Black";
+            font-size: x-small;
+        }
+
+        .style5 {
+            font-family: "Arial Black";
+            font-size: small;
+        }
+
+        .style6 {
+            font-size: small;
+        }
+
+        .header {
+            width: 100%;
+        }
+
+        .whiteback {
+            height: auto;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        function callPrint(strid) {
+            var prtContent = document.getElementById(strid).innerHTML;
+            var WinPrint = window.open('', '', 'toolbar=0,status=0,top=0,left=0');
+            WinPrint.document.write('<html><head><title>Print Report</title>');
+            WinPrint.document.write('<style>body{ font-family: Arial, sans-serif; }</style>');
+            WinPrint.document.write('</head><body>');
+            WinPrint.document.write(prtContent);
+            WinPrint.document.write('</body></html>');
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+            WinPrint.close();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="whiteback">
+            <img src="images\hospital.jpg" alt="KMC Manipal" height="80px" style="width: 15%;" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/tuv_cert.jpg" alt="TUV Certification" height="80px" style="width: 15%;" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="images\nabhLogo.jpg" alt="NABH" height="70px" style="width: 7%;" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/AAHRPP.jpg" alt="AAHRPP" height="80px" style="width: 18%;" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="Images/manipallog.png" alt="Manipal Logo" height="80px" style="width: 9%;" />
+            <p>----------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        </div>
+        <div class="title">
+            <h2>DEPARTMENT OF CARDIOLOGY, KASTURBA HOSPITAL, MANIPAL</h2>
+            <h2>ECHOCARDIOGRAPHY REPORT</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <center>
+            <b>
+                <span style="font-size: large;">Patient Report Details</span>
+            </b>
+        </center>
+    
+        <div class="container" style="background-color: white; font-size: 13px; border: outset">
+            <div class="row">
+                <center>
+                    <div class="col-md-1"></div>
+                </center>
+    
+                <center>
+                    <div class="col-md-4" style="padding-top: 1%">
+                        <div class="form-group form-inline">
+                            <div class="col-md-4">
+                                <label for="txtPatientID">Hospital No. :</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" id="txtPatientID" style="width: 200px;" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4" style="padding-top: 1%">
+                        <div class="form-group form-inline">
+                            <div class="col-md-4">
+                                <label for="ddlDate">Date :</label>
+                            </div>
+                            <div class="col-md-8" style="margin-bottom: 21px;">
+                                <select id="ddlDate" style="width: 200px;" class="form-control">
+                                    <option>Select Date</option>
+                                    <!-- Add more date options here -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-12" style="padding-top: 1%">
+                    <center>
+                        <div class="col-md-3"></div>
+                    </center>
+    
+                    <div class="col-md-6" style="padding-bottom: 12px" id="divButton">
+                        <center>
+                            <button type="button" style="height: 32px; background-color: #993300; color: white;" onclick="AddConfirmSubmit();">
+                                General Report
+                            </button>
+    
+                            <button type="button" style="height: 32px; width: 123px; background-color: #993300; color: white;" onclick="AddConfirmSubmit();">
+                                Detailed Report
+                            </button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function AddConfirmSubmit() {
+            var uname = document.getElementById('txtPatientID').value;
+            var dname = document.getElementById('ddlDate').value;
+            if (uname === "" || dname === "Select Date") {
+                alert("Patient ID or Date Shouldn't be empty!");
+            }
+        }
+    </script>
+    
+    <script type="text/javascript">
+        function ViewPdf() {
+            window.open('stats/DisplayPdf.aspx', '_blank');
+        }
+    </script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information</title>
+    <!-- Bootstrap CSS for Responsive Design and Professional Look -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .table th {
+            background-color: #343a40;
+            color: white;
+        }
+        .table tbody td {
+            background-color: #fff;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #343a40;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<>
+
+<div class="container">
+    <h2 class="text-center mb-4">Patient Information</h2>
+
+    <!-- Input Section -->
+    <div class="row mb-4">
+        <h5 class="section-title">Patient Details</h5>
+        <div class="col-md-4">
+            <label class="form-label" for="txtHospitalNo">Hospital No:</label>
+            <input type="text" id="txtHospitalNo" class="form-control" disabled placeholder="Hospital No" />
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="txtDeptUnit">Dept Unit:</label>
+            <input type="text" id="txtDeptUnit" class="form-control" disabled placeholder="Dept Unit" />
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="txtWardOpd">Ward/OPD:</label>
+            <input type="text" id="txtWardOpd" class="form-control" disabled placeholder="Ward/OPD" />
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label class="form-label" for="txtPhoneNo">Phone No:</label>
+            <input type="text" id="txtPhoneNo" class="form-control" disabled placeholder="Phone No" />
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="txtConsultantDocotor">Consultant Doctor:</label>
+            <input type="text" id="txtConsultantDocotor" class="form-control" disabled placeholder="Consultant Doctor" />
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="txtQOAW">QOAW:</label>
+            <input type="text" id="txtQOAW" class="form-control" placeholder="QOAW" />
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label class="form-label" for="txtAge">Age:</label>
+            <input type="text" id="txtAge" class="form-control" disabled placeholder="Age" />
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="txtSex">Sex:</label>
+            <input type="text" id="txtSex" class="form-control" placeholder="Sex" />
+        </div>
+        <div class="col-md-4">
+            <label class="form-label" for="txtName">Name:</label>
+            <input type="text" id="txtName" class="form-control" disabled placeholder="Name" />
+        </div>
+    </div>
+
+    <!-- Patient Info Table -->
+    <h5 class="section-title">Visit Details</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Hospital No</th>
+                    <th>Visit Date</th>
+                    <th>Patient Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>P ID</th>
+                    <th>Ward/Opd</th>
+                    <th>Department Name</th>
+                    <th>Consultant Doctor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>  </td>
+                    <td>   </td>
+                    <td></td>
+                    <td></td>
+                    <td>  </td>
+                    <td>     </td>
+                    <td>    </td>
+                    <td>   </td>
+                    <td>    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Additional Information -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <label class="form-label">Quality of Acoustic Window:</label>
+            <p id="lblqoaw1" class="form-control-plaintext">Good</p>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<div class="container">
+    <h2 class="text-center mb-4">Left and Right Atrium Information</h2>
+
+    <h5 class="section-title">Atrium Details</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center">LEFT ATRIUM</th>
+                    <th colspan="2" class="text-center">RIGHT ATRIUM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="fw-bold">A-P DIMENSION:</td>
+                    <td>
+                        <span id="lblLeftAPdimension">A-P DIMENSION :</span>
+                        <span id="lblleftap"></span>
+                        <span id="lblLeftAPrange">mm(19-40)</span>
+                    </td>
+                    <td class="fw-bold">A-P DIMENSION:</td>
+                    <td>
+                        <span id="lblRightAPdimension">A-P DIMENSION :</span>
+                        <span id="lblrightap"></span>
+                        <span id="lblRightAPrange">mm(19-40)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">I-S DIMENSION:</td>
+                    <td>
+                        <span id="lblleftis"></span>
+                        <span id="lblLeftISrange">mm(&lt;50-55)</span>
+                    </td>
+                    <td class="fw-bold">I-S DIMENSION:</td>
+                    <td>
+                        <span id="lblrightis"></span>
+                        <span id="lblRightISrange">mm(&lt;50-55)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">AREA:</td>
+                    <td>
+                        <span id="lbllefta"></span>
+                        <span id="lblLeftAreaUnit">cm</span>
+                    </td>
+                    <td class="fw-bold">AREA:</td>
+                    <td>
+                        <span id="lblrighta"></span>
+                        <span id="lblRightAreaUnit">cm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">VOLUME:</td>
+                    <td>
+                        <span id="lblleftv"></span>
+                        <span id="lblLeftVolumeUnit">ml</span>
+                    </td>
+                    <td class="fw-bold">VOLUME:</td>
+                    <td>
+                        <span id="lblrightv"></span>
+                        <span id="lblRightVolumeUnit">ml</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<div class="container">
+    <h2 class="text-center mb-4">LV and RV Information</h2>
+
+    <h5 class="section-title">Ventricle Details</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center">LV</th>
+                    <th colspan="2" class="text-center">RV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="fw-bold">IVS: S/D</td>
+                    <td>
+                        <span id="lblLVIVS"></span>
+                        <span>mm</span>
+                    </td>
+                    <td class="fw-bold">RV Fractional Area</td>
+                    <td>
+                        <span id="lblRVFractionalArea"></span>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">PW: S/D</td>
+                    <td>
+                        <span id="lblLVPW"></span>
+                        <span>mm</span>
+                    </td>
+                    <td class="fw-bold">RVOT Fraction</td>
+                    <td>
+                        <span id="lblRVOTFraction"></span>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">EDV</td>
+                    <td>
+                        <span id="lblLVEDV"></span>
+                        <span>ml</span>
+                    </td>
+                    <td class="fw-bold">Free Wall</td>
+                    <td>
+                        <span id="lblRVFreeWall"></span>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">ESV</td>
+                    <td>
+                        <span id="lblLVESV"></span>
+                        <span>ml</span>
+                    </td>
+                    <td class="fw-bold">EF</td>
+                    <td>
+                        <span id="lblRVEF"></span>
+                        <span>%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">ALEF</td>
+                    <td>
+                        <span id="lblLVALEF"></span>
+                        <span>%</span>
+                    </td>
+                    <td class="fw-bold">TAPSE</td>
+                    <td>
+                        <span id="lblRVTAPSE"></span>
+                        <span>mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">SV</td>
+                    <td>
+                        <span id="lblLVSV"></span>
+                        <span>mm</span>
+                    </td>
+                    <td class="fw-bold">CO</td>
+                    <td>
+                        <span id="lblRVCO"></span>
+                        <span>mm</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<div class="container">
+    <h2 class="text-center mb-4">AORTA Information</h2>
+
+    <h5 class="section-title">AORTA Details</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center">Measurement</th>
+                    <th colspan="2" class="text-center">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="fw-bold">EDD:</td>
+                    <td>
+                        <span id="lbledd2">EDD</span>
+                    </td>
+                    <td>
+                        <span id="lbledd"></span>
+                    </td>
+                    <td>
+                        <span id="lbledd1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">ROOT:</td>
+                    <td>
+                        <span id="lblroot2">ROOT</span>
+                    </td>
+                    <td>
+                        <span id="lblroot"></span>
+                    </td>
+                    <td>
+                        <span id="lblroot1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">ESD:</td>
+                    <td>
+                        <span id="lblesd2">ESD</span>
+                    </td>
+                    <td>
+                        <span id="lblesd"></span>
+                    </td>
+                    <td>
+                        <span id="lblesd1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">SINOTUBULAR JUNCTION:</td>
+                    <td>
+                        <span id="lblsj2">SINOTUBULAR JUNCTION</span>
+                    </td>
+                    <td>
+                        <span id="lblsj"></span>
+                    </td>
+                    <td>
+                        <span id="lblsj1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">EF:</td>
+                    <td>
+                        <span id="lbllvef2">EF</span>
+                    </td>
+                    <td>
+                        <span id="lbllvef"></span>
+                    </td>
+                    <td>
+                        <span id="lbllvef1">%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">ASCENDING AORTA:</td>
+                    <td>
+                        <span id="lblaa2">ASCENDING AORTA</span>
+                    </td>
+                    <td>
+                        <span id="lblaa"></span>
+                    </td>
+                    <td>
+                        <span id="lblaa1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">FS:</td>
+                    <td>
+                        <span id="lblfs2">FS</span>
+                    </td>
+                    <td>
+                        <span id="lblfs"></span>
+                    </td>
+                    <td>
+                        <span id="lblfs1">%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">ARCH:</td>
+                    <td>
+                        <span id="lblarch2">ARCH</span>
+                    </td>
+                    <td>
+                        <span id="lblarch"></span>
+                    </td>
+                    <td>
+                        <span id="lblarch1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">HR:</td>
+                    <td>
+                        <span id="lblhr2">HR</span>
+                    </td>
+                    <td>
+                        <span id="lblhr"></span>
+                    </td>
+                    <td>
+                        <span id="lblhr1">bpm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">DESCENDING AORTA:</td>
+                    <td>
+                        <span id="lblda2">DESCENDING AORTA</span>
+                    </td>
+                    <td>
+                        <span id="lblda"></span>
+                    </td>
+                    <td>
+                        <span id="lblda1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">ABDOMINAL AORTA:</td>
+                    <td>
+                        <span>ABDOMINAL AORTA</span>
+                    </td>
+                    <td>
+                        <span id="lblaarota"></span>
+                    </td>
+                    <td>
+                        <span id="lblaarota1">mm</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">MACS:</td>
+                    <td>
+                        <span>MACS</span>
+                    </td>
+                    <td>
+                        <span id="lblmacs"></span>
+                    </td>
+                    <td>
+                        <span id="lblmacs1">mm</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- ============================================
+ =================================================
+================================================-->
+
+    
+</body>
+
+</html>
