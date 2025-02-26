@@ -622,50 +622,50 @@
             </div>
 
         <!-- RAP Section -->
-        <div class="container" style="background-color: white; font-size: 13px; border: outset; padding: 10px; margin-top: 20px;">
-            <div class="row">
-                <div class="col-md-12" style="padding-top: 1%;">
-                    <div class="form-group form-inline">
-                        <div class="col-md-12" style="font-size: 20px; font-weight: 700; color: #333; padding-left: 300px; white-space: nowrap;">
-                            RAP
+            <div class="container" style="background-color: white; font-size: 13px; border: outset;">
+                <div class="row">
+                    <div class="col-md-12" style="padding-top: 1%;padding-left: 45%;">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center" style="font-size: 20px; font-weight: 700; color: #333; white-space: nowrap;">
+                                RAP
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             
-
-            <div class="row">
-                <div class="col-md-4" style="padding-top: 1%;padding-left: 6%;">
-                    <label for="txtRAPIVC">IVC-MAX/MIN:</label>
-                    <input type="text" class="form-control" ng-model="RAPIVC"/>
-                    <span>mm</span>
-                </div>
-
-                <div class="col-md-4" style="padding-top: 1%;padding-left: 6%;">
-                    <label for="txtHEPS">Hepatic Vein S:</label>
-                    <input type="text" class="form-control" ng-model="HEPS"/>
-                    <span>m/s</span>
-                </div>
-
-                <div class="col-md-4" style="padding-top: 1%;padding-left: 6%;">
-                    <label for="txtHEPD">Hepatic Vein D:</label>
-                    <input type="text" class="form-control" ng-model="HEPD"/>
-                    <span>m/s</span>
-                </div>
-
-                <div class="col-md-4" style="padding-top: 1%;padding-left: 6%;">
-                    <label for="txtFLOW">Reversal Flow Velocity:</label>
-                    <input type="text" class="form-control" ng-model="FLOW"/>
-                    <span>m/s</span>
-                </div>
-
-                <div class="col-md-4" style="padding-top: 1%;padding-left: 6%;">
-                    <label for="txtRAPRemark">Remarks:</label>
-                    <input type="text" class="form-control" ng-model="RAPRemark"/>
+                <!-- Consistent spacing between rows using gy-4 -->
+                <div class="row gx-3 gy-4">
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">IVC-MAX/MIN:</label>
+                        <input type="text" class="form-control me-2" ng-model="RAPIVC">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">Hepatic Vein S:</label>
+                        <input type="text" class="form-control me-2" ng-model="HEPS">
+                        <span>m/s</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">Hepatic Vein D:</label>
+                        <input type="text" class="form-control me-2" ng-model="HEPD">
+                        <span>m/s</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">Reversal Flow Velocity:</label>
+                        <input type="text" class="form-control me-2" ng-model="FLOW">
+                        <span>m/s</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">Remarks:</label>
+                        <input type="text" class="form-control me-2" ng-model="RAPRemark">
+                    </div>
                 </div>
             </div>
-        </div>
-
+        
 
         
         <!--  "Type of Heart Disease" -->
