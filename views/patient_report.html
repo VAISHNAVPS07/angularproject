@@ -8,6 +8,11 @@
     <script src="app.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style type="text/css">
+        @media print {
+        .no-print {
+            display: none;
+        }
+        }
         .style1 {
             font-weight: bold;
             font-family: "Arial Black";
@@ -76,37 +81,12 @@
             margin-bottom: 15px;
         }
     </style>
-    <script type="text/javascript">
-        function callPrint(strid) {
-            var prtContent = document.getElementById(strid).innerHTML;
-            var WinPrint = window.open('', '', 'toolbar=0,status=0,top=0,left=0');
-            WinPrint.document.write('<html><head><title>Print Report</title>');
-            WinPrint.document.write('<style>body{ font-family: Arial, sans-serif; }</style>');
-            WinPrint.document.write('</head><body>');
-            WinPrint.document.write(prtContent);
-            WinPrint.document.write('</body></html>');
-            WinPrint.document.close();
-            WinPrint.focus();
-            WinPrint.print();
-            WinPrint.close();
-        }
-    </script>
+    
 </head>
 
 <body>
     <div class="header">
-        <div class="whiteback">
-            <img src="images\hospital.jpg" alt="KMC Manipal" height="80px" style="width: 15%;" />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <img src="Images/tuv_cert.jpg" alt="TUV Certification" height="80px" style="width: 15%;" />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <img src="images\nabhLogo.jpg" alt="NABH" height="70px" style="width: 7%;" />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <img src="Images/AAHRPP.jpg" alt="AAHRPP" height="80px" style="width: 18%;" />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <img src="Images/manipallog.png" alt="Manipal Logo" height="80px" style="width: 9%;" />
-            <p>----------------------------------------------------------------------------------------------------------------------------------------------------</p>
-        </div>
+        
         <div class="title">
             <h2>DEPARTMENT OF CARDIOLOGY, KASTURBA HOSPITAL, MANIPAL</h2>
             <h2>ECHOCARDIOGRAPHY REPORT</h2>
@@ -1127,6 +1107,13 @@
 
     <!-- Bootstrap JS for Interactivity (Optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <div class="text-center mt-4 no-print">
+        <button class="btn btn-primary" onclick="window.print()">Print as PDF</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
 
