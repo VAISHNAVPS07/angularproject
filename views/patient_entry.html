@@ -9,19 +9,19 @@
                 <div class="row gx-3 gy-1">
                     <div class="col-md-3" style="padding-left: 2%;">
                         <label class="no-underline mb-1">Disease ID:</label>
-                        <input type="text" class="form-control form-control-sm" ng-model="patient.diseaseID">
+                        <input type="text" class="form-control form-control-sm" ng-model="patient.diseaseID"/>
                     </div>
                     <div class="col-md-3" style="padding-left: 2%;">
                         <label class="no-underline mb-1">Hospital No.:</label>
-                        <input type="text" class="form-control form-control-sm" ng-model="patient.hospitalNo">
+                        <input type="text" class="form-control form-control-sm" ng-model="patient.hospitalNo"/>
                     </div>
                     <div class="col-md-3" style="padding-left: 2%;">
                         <label class="no-underline mb-1">Name:</label>
-                        <input type="text" class="form-control form-control-sm" ng-model="patient.name">
+                        <input type="text" class="form-control form-control-sm" ng-model="patient.name"/>
                     </div>
                     <div class="col-md-3"style="padding-left: 2%;">
                         <label class="no-underline mb-1">DOB:</label>
-                        <input type="date" class="form-control form-control-sm" ng-model="patient.dob">
+                        <input type="date" class="form-control form-control-sm" ng-model="patient.dob"/>
                     </div>
                 </div>
                 <div class="row gx-3 gy-2 ">
@@ -29,10 +29,10 @@
                         <label class="no-underline mb-1">Sex:</label>
                         <div>
                             <label class="no-underline me-2">
-                                <input type="radio" ng-model="patient.sex" value="M"> Male
+                                <input type="radio" ng-model="patient.sex" value="M"/> Male
                             </label>
                             <label class="no-underline">
-                                <input type="radio" ng-model="patient.sex" value="F"> Female
+                                <input type="radio" ng-model="patient.sex" value="F"/> Female
                             </label>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="col-md-3"style="padding-left: 2%;">
                         <label class="no-underline mb-1">Dept/Unit:</label>
-                        <select class="form-control form-control-sm" ng-model="patient.dept">
+                        <select class="form-control form-control-sm" ng-model="patient.dept"/>
                             <option value="">Select</option>
                             <option value="Cardiology">Cardiology</option>
                             <option value="Neurology">Neurology</option>
@@ -65,7 +65,7 @@
                     
                     <div class="col-md-3"style="padding-left: 2%;">
                         <label class="no-underline mb-1">Date:</label>
-                        <input type="date" class="form-control form-control-sm" ng-model="patient.date">
+                        <input type="date" class="form-control form-control-sm" ng-model="patient.date"/>
                     </div>
                     <div class="col-md-6"style="padding-left: 5%;">
                         <label class="no-underline mb-1">Consultant Doctor:</label>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="row gx-3 gy-2 mt-2">
                     <div class="col-md-12">
-                        <input type="checkbox" ng-model="patient.retrieveLastVisit"> Retrieve last visited information?
+                        <input type="checkbox" ng-model="patient.retrieveLastVisit"/> Retrieve last visited information?
                     </div>
                 </div>
             </div>
@@ -90,16 +90,16 @@
                             </label>
                             <div class="col-md-9" style="display: flex; align-items: center; flex-wrap: nowrap; gap: 10px; padding-left: 5%;padding-top: 4%;">
                                 <label style="margin-bottom: 0; white-space: nowrap; text-decoration: none;">
-                                    <input type="radio" name="acousticQuality" value="Excellent" ng-model="patient.acousticQuality"> Excellent
+                                    <input type="radio" name="acousticQuality" value="Excellent" ng-model="patient.acousticQuality"/> Excellent
                                 </label>
                                 <label style="margin-bottom: 0; white-space: nowrap; text-decoration: none;">
-                                    <input type="radio" name="acousticQuality" value="Good" ng-model="patient.acousticQuality"> Good
+                                    <input type="radio" name="acousticQuality" value="Good" ng-model="patient.acousticQuality"/> Good
                                 </label>
                                 <label style="margin-bottom: 0; white-space: nowrap; text-decoration: none;">
-                                    <input type="radio" name="acousticQuality" value="Poor" ng-model="patient.acousticQuality"> Poor
+                                    <input type="radio" name="acousticQuality" value="Poor" ng-model="patient.acousticQuality"/> Poor
                                 </label>
                                 <label style="margin-bottom: 0; white-space: nowrap; text-decoration: none;">
-                                    <input type="radio" name="acousticQuality" value="Very Poor" ng-model="patient.acousticQuality"> Very Poor
+                                    <input type="radio" name="acousticQuality" value="Very Poor" ng-model="patient.acousticQuality"/> Very Poor
                                 </label>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                             <div class="d-flex align-items-center" >
                                 <!-- Underline removed and text kept in a single line -->
                                 <label for="txtLeftAPD" class="me-2 fw-bold" style="text-decoration: none; white-space: nowrap;">A-P DIMENSION</label>
-                                <input type="text" class="form-control me-2" ng-model="LeftAPD" style="border-radius: 0;">
+                                <input type="text" class="form-control me-2" ng-model="LeftAPD" style="border-radius: 0;"/>
                                 <small class="form-text text-muted">mm (19-40)</small>
                             </div>
                         </div>
@@ -131,7 +131,7 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="txtLeft1SD" class="fw-bold" style="text-decoration: none; white-space: nowrap;">1-S DIMENSION</label>
-                            <input type="text" class="form-control" ng-model="Left1SD">
+                            <input type="text" class="form-control" ng-model="Left1SD"/>
                             <small class="form-text text-muted">mm (&lt;50-55)</small>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="txtLeftArea" class="fw-bold" style="text-decoration: none; white-space: nowrap;">AREA</label>
-                            <input type="text" class="form-control" ng-model="LeftArea">
+                            <input type="text" class="form-control" ng-model="LeftArea"/>
                             <small class="form-text text-muted">cm</small>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="txtLeftVolume" class="fw-bold" style="text-decoration: none; white-space: nowrap;">VOLUME</label>
-                            <input type="text" class="form-control" ng-model="LeftVolume">
+                            <input type="text" class="form-control" ng-model="LeftVolume"/>
                             <small class="form-text text-muted">ml</small>
                         </div>
                     </div>
@@ -171,55 +171,55 @@
                 <div class="row gx-3 gy-4">
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">IVS: S/D</label>
-                        <input type="text" class="form-control me-2" ng-model="ivsSd">
+                        <input type="text" class="form-control me-2" ng-model="ivsSd"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">PW: S/D</label>
-                        <input type="text" class="form-control me-2" ng-model="pwsd">
+                        <input type="text" class="form-control me-2" ng-model="pwsd"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">EDV</label>
-                        <input type="text" class="form-control me-2" ng-model="edv">
+                        <input type="text" class="form-control me-2" ng-model="edv"/>
                         <span>ml</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">ESV</label>
-                        <input type="text" class="form-control me-2" ng-model="esv">
+                        <input type="text" class="form-control me-2" ng-model="esv"/>
                         <span>ml</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">ALEF</label>
-                        <input type="text" class="form-control me-2" ng-model="alef">
+                        <input type="text" class="form-control me-2" ng-model="alef"/>
                         <span>%</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">SV</label>
-                        <input type="text" class="form-control me-2" ng-model="sv">
+                        <input type="text" class="form-control me-2" ng-model="sv"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">CO</label>
-                        <input type="text" class="form-control me-2" ng-model="CO">
+                        <input type="text" class="form-control me-2" ng-model="CO"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">EDD</label>
-                        <input type="text" class="form-control me-2" ng-model="EDD">
+                        <input type="text" class="form-control me-2" ng-model="EDD"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">ESD</label>
-                        <input type="text" class="form-control me-2" ng-model="ESD">
+                        <input type="text" class="form-control me-2" ng-model="ESD"/>
                         <span>mm</span>
                     </div>
                 </div>
@@ -242,31 +242,31 @@
                 <div class="row gx-3 gy-4">
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" for="txtRVFArea" style="text-decoration: none;">RV Fractional Area:</label>
-                        <input type="text" class="form-control me-2" ng-model="RVFArea">
+                        <input type="text" class="form-control me-2" ng-model="RVFArea"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" for="txtRvotFrac" style="text-decoration: none;">RVOT FRACTION:</label>
-                        <input type="text" class="form-control me-2" ng-model="RvotFrac">
+                        <input type="text" class="form-control me-2" ng-model="RvotFrac"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" for="txtFreeWall" style="text-decoration: none;">FREE WALL:</label>
-                        <input type="text" class="form-control me-2" ng-model="FreeWall">
+                        <input type="text" class="form-control me-2" ng-model="FreeWall"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" for="txtRVEF" style="text-decoration: none;">EF:</label>
-                        <input type="text" class="form-control me-2" ng-model="txtRVEF">
+                        <input type="text" class="form-control me-2" ng-model="txtRVEF"/>
                         <span>%</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" for="txtTapse" style="text-decoration: none;">TAPSE:</label>
-                        <input type="text" class="form-control me-2" ng-model="Tapse">
+                        <input type="text" class="form-control me-2" ng-model="Tapse"/>
                         <span>mm</span>
                     </div>
                 </div>
@@ -289,43 +289,43 @@
                 <div class="row gx-3 gy-4">
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 2%;">
                         <label class="me-2 fw-bold" for="txtRoot" style="text-decoration: none;">ROOT:</label>
-                        <input type="text" class="form-control me-2" ng-model="Root">
+                        <input type="text" class="form-control me-2" ng-model="Root"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;">
                         <label class="me-2 fw-bold" for="txtSinJunction" style="text-decoration: none;">SINOTUBULAR JUNCTION:</label>
-                        <input type="text" class="form-control me-2" ng-model="SinJunction">
+                        <input type="text" class="form-control me-2" ng-model="SinJunction"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;">
                         <label class="me-2 fw-bold" for="txtAscAorta" style="text-decoration: none;">ASCENDING AORTA:</label>
-                        <input type="text" class="form-control me-2" ng-model="AscAorta">
+                        <input type="text" class="form-control me-2" ng-model="AscAorta"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 2%;padding-top: 2%;">
                         <label class="me-2 fw-bold" for="txtArch" style="text-decoration: none;">ARCH:</label>
-                        <input type="text" class="form-control me-2" ng-model="Arch">
+                        <input type="text" class="form-control me-2" ng-model="Arch"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;padding-top: 2%;">
                         <label class="me-2 fw-bold" for="txtDesAorta" style="text-decoration: none;">DESCENDING AORTA:</label>
-                        <input type="text" class="form-control me-2" ng-model="DesAorta">
+                        <input type="text" class="form-control me-2" ng-model="DesAorta"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;padding-top: 2%;">
                         <label class="me-2 fw-bold" for="txtAbdAorta" style="text-decoration: none;">ABDOMINAL AORTA:</label>
-                        <input type="text" class="form-control me-2" ng-model="AbdAorta">
+                        <input type="text" class="form-control me-2" ng-model="AbdAorta"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 2%;padding-top: 2%;">
                         <label class="me-2 fw-bold" for="txtMacs" style="text-decoration: none;">MACS:</label>
-                        <input type="text" class="form-control me-2" ng-model="Macs">
+                        <input type="text" class="form-control me-2" ng-model="Macs"/>
                         <span>mm</span>
                     </div>
                 </div>
@@ -360,55 +360,55 @@
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">PV:</label>
-                        <input type="text" class="form-control me-2" ng-model="PV">
+                        <input type="text" class="form-control me-2" ng-model="PV"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">MV-E:</label>
-                        <input type="text" class="form-control me-2" ng-model="MVE">
+                        <input type="text" class="form-control me-2" ng-model="MVE"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">IVRT:</label>
-                        <input type="text" class="form-control me-2" ng-model="IVRT">
+                        <input type="text" class="form-control me-2" ng-model="IVRT"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">IVCT:</label>
-                        <input type="text" class="form-control me-2" ng-model="IVCT">
+                        <input type="text" class="form-control me-2" ng-model="IVCT"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">MVO by PHT:</label>
-                        <input type="text" class="form-control me-2" ng-model="MVObyPHT">
+                        <input type="text" class="form-control me-2" ng-model="MVObyPHT"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">MVO by 2D ECHO:</label>
-                        <input type="text" class="form-control me-2" ng-model="MVObyECHO">
+                        <input type="text" class="form-control me-2" ng-model="MVObyECHO"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">MPG:</label>
-                        <input type="text" class="form-control me-2" ng-model="MIMPG">
+                        <input type="text" class="form-control me-2" ng-model="MIMPG"/>
                         <span>mmHg</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">PPG:</label>
-                        <input type="text" class="form-control me-2" ng-model="MIPPG">
+                        <input type="text" class="form-control me-2" ng-model="MIPPG"/>
                         <span>mmHg</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">Prosthetic Valve:</label>
-                        <input type="text" class="form-control me-2" ng-model="MVPros">
+                        <input type="text" class="form-control me-2" ng-model="MVPros"/>
                         <span>Type</span>
                     </div>
                 </div>
@@ -430,19 +430,19 @@
                 <div class="row gx-3 gy-4">
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">AVA:</label>
-                        <input type="text" class="form-control me-2" ng-model="AVA">
+                        <input type="text" class="form-control me-2" ng-model="AVA"/>
                         <span>cm²</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">Vmax:</label>
-                        <input type="text" class="form-control me-2" ng-model="Vmax">
+                        <input type="text" class="form-control me-2" ng-model="Vmax"/>
                         <span>m/s</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">PG:</label>
-                        <input type="text" class="form-control me-2" ng-model="PG">
+                        <input type="text" class="form-control me-2" ng-model="PG"/>
                         <span>mmHg</span>
                     </div>
             
@@ -458,13 +458,13 @@
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">AI Jet Width:</label>
-                        <input type="text" class="form-control me-2" ng-model="AIJetWidth">
+                        <input type="text" class="form-control me-2" ng-model="AIJetWidth"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">AI PHT:</label>
-                        <input type="text" class="form-control me-2" ng-model="AIPHT">
+                        <input type="text" class="form-control me-2" ng-model="AIPHT"/>
                         <span>ms</span>
                     </div>
                 </div>
@@ -486,66 +486,66 @@
                 <div class="row gx-3 gy-4">
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">DT:</label>
-                        <input type="text" class="form-control me-2" ng-model="TRDT">
+                        <input type="text" class="form-control me-2" ng-model="TRDT"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">TRICUSPID ANNULUS DIMENSION:</label>
-                        <input type="text" class="form-control me-2" ng-model="TRANNDIM">
+                        <input type="text" class="form-control me-2" ng-model="TRANNDIM"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">PV:</label>
-                        <input type="text" class="form-control me-2" ng-model="TRPV">
+                        <input type="text" class="form-control me-2" ng-model="TRPV"/>
                         <span>m/s</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">TRICUSPID VALVE AREA BY PHT:</label>
-                        <input type="text" class="form-control me-2" ng-model="TRVALAR">
+                        <input type="text" class="form-control me-2" ng-model="TRVALAR"/>
                         <span>cm<sup>2</sup></span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">TV-E:</label>
-                        <input type="text" class="form-control me-2" ng-model="TRTVE">
+                        <input type="text" class="form-control me-2" ng-model="TRTVE"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">RV MPI:</label>
-                        <input type="text" class="form-control me-2" ng-model="TRRVMPI">
+                        <input type="text" class="form-control me-2" ng-model="TRRVMPI"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">TV-A:</label>
-                        <input type="text" class="form-control me-2" ng-model="TRTVA">
+                        <input type="text" class="form-control me-2" ng-model="TRTVA"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">MPG:</label>
-                        <input type="text" class="form-control me-2" ng-model="TRMPG">
+                        <input type="text" class="form-control me-2" ng-model="TRMPG"/>
                         <span>mmHg</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">PPG:</label>
-                        <input type="text" class="form-control me-2" ng-model="TRPPG">
+                        <input type="text" class="form-control me-2" ng-model="TRPPG"/>
                         <span>mmHg</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">Prosthetic Valve:</label>
-                        <input type="text" class="form-control me-2" ng-model="TRPROS">
+                        <input type="text" class="form-control me-2" ng-model="TRPROS"/>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">RVSP=</label>
-                        <input type="text" class="form-control me-2" ng-model="TRRVSP">
+                        <input type="text" class="form-control me-2" ng-model="TRRVSP"/>
                         <span>+RAP mmHg</span>
                     </div>
                 </div>
@@ -569,30 +569,30 @@
                 <div class="row gx-3 gy-4">
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">Pulmonary Annulus:</label>
-                        <input type="text" class="form-control me-2" ng-model="PULAN">
+                        <input type="text" class="form-control me-2" ng-model="PULAN"/>
                         <span>mm</span>
                     </div>
 
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">PV:</label>
-                        <input type="text" class="form-control me-2" ng-model="PULPV">
+                        <input type="text" class="form-control me-2" ng-model="PULPV"/>
                         <span>m/s</span>
                     </div>
 
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">Remarks:</label>
-                        <input type="text" class="form-control me-2" ng-model="PULRemark">
+                        <input type="text" class="form-control me-2" ng-model="PULRemark"/>
                     </div>
 
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">Pulmonary Dimension:</label>
-                        <input type="text" class="form-control me-2" ng-model="PULDI">
+                        <input type="text" class="form-control me-2" ng-model="PULDI"/>
                         <span>mm</span>
                     </div>
 
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">AT:</label>
-                        <input type="text" class="form-control me-2" ng-model="PULAT">
+                        <input type="text" class="form-control me-2" ng-model="PULAT"/>
                         <span>ms</span>
                     </div>
 
@@ -607,13 +607,13 @@
 
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">MPA:</label>
-                        <input type="text" class="form-control me-2" ng-model="PULMPA">
+                        <input type="text" class="form-control me-2" ng-model="PULMPA"/>
                         <span>mm</span>
                     </div>
 
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">PPG:</label>
-                        <input type="text" class="form-control me-2" ng-model="PPG">
+                        <input type="text" class="form-control me-2" ng-model="PPG"/>
                         <span>mmHg</span>
                     </div>
                 </div>
@@ -635,31 +635,31 @@
                 <div class="row gx-3 gy-4">
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">IVC-MAX/MIN:</label>
-                        <input type="text" class="form-control me-2" ng-model="RAPIVC">
+                        <input type="text" class="form-control me-2" ng-model="RAPIVC"/>
                         <span>mm</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">Hepatic Vein S:</label>
-                        <input type="text" class="form-control me-2" ng-model="HEPS">
+                        <input type="text" class="form-control me-2" ng-model="HEPS"/>
                         <span>m/s</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">Hepatic Vein D:</label>
-                        <input type="text" class="form-control me-2" ng-model="HEPD">
+                        <input type="text" class="form-control me-2" ng-model="HEPD"/>
                         <span>m/s</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">Reversal Flow Velocity:</label>
-                        <input type="text" class="form-control me-2" ng-model="FLOW">
+                        <input type="text" class="form-control me-2" ng-model="FLOW"/>
                         <span>m/s</span>
                     </div>
             
                     <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
                         <label class="me-2 fw-bold" style="text-decoration: none;">Remarks:</label>
-                        <input type="text" class="form-control me-2" ng-model="RAPRemark">
+                        <input type="text" class="form-control me-2" ng-model="RAPRemark"/>
                     </div>
                 </div>
             </div>
