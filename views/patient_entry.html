@@ -144,7 +144,7 @@
                     <div class="form-group">
                         <div class="d-flex align-items-center">
                             <label for="txtLeftAPD" class="mr-2">A-P DIMENSION</label>
-                            <input type="text" class="form-control border-top-0 border-bottom-0 border-left-0 border-right-0" id="txtLeftAPD" style="border-radius: 0;" ng-model="leftAtrium.apDimension">
+                            <input type="text" class="form-control border-top-0 border-bottom-0 border-left-0 border-right-0" ng-model="LeftAPD" style="border-radius: 0;" >
                             <small class="form-text text-muted ml-2">mm (19-40)</small>
                         </div>
                     </div>
@@ -190,19 +190,19 @@
             <div class="row" style="display: flex; justify-content: space-between; margin-bottom: 15px;">
                 <div class="col-md-4" style="display: flex; align-items: center; gap: 8px;">
                     <label for="txtIVSSD" style="flex-shrink: 0; width: 40%;">IVS: S/D</label>
-                    <input type="text" class="form-control" id="txtIVSSD" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="text" class="form-control" ng-model="ivsSd" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
                     <span style="flex-shrink: 0; color: #777;">mm</span>
                 </div>
         
                 <div class="col-md-4" style="display: flex; align-items: center; gap: 8px;">
                     <label for="txtPWSD" style="flex-shrink: 0; width: 40%;">PW: S/D</label>
-                    <input type="text" class="form-control" id="txtPWSD" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="text" class="form-control" ng-model="pwsd" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
                     <span style="flex-shrink: 0; color: #777;">mm</span>
                 </div>
         
                 <div class="col-md-4" style="display: flex; align-items: center; gap: 8px;">
                     <label for="txtEDV" style="flex-shrink: 0; width: 40%;">EDV</label>
-                    <input type="text" class="form-control" id="txtEDV" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="text" class="form-control" ng-model="edv" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
                     <span style="flex-shrink: 0; color: #777;">ml</span>
                 </div>
             </div>
@@ -211,19 +211,19 @@
             <div class="row" style="display: flex; justify-content: space-between; margin-bottom: 15px;">
                 <div class="col-md-4" style="display: flex; align-items: center; gap: 8px;">
                     <label for="txtESV" style="flex-shrink: 0; width: 40%;">ESV</label>
-                    <input type="text" class="form-control" id="txtESV" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="text" class="form-control" ng-model="esv" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
                     <span style="flex-shrink: 0; color: #777;">ml</span>
                 </div>
         
                 <div class="col-md-4" style="display: flex; align-items: center; gap: 8px;">
                     <label for="txtALEF" style="flex-shrink: 0; width: 40%;">ALEF</label>
-                    <input type="text" class="form-control" id="txtALEF" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="text" class="form-control" ng-model="alef" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
                     <span style="flex-shrink: 0; color: #777;">%</span>
                 </div>
         
                 <div class="col-md-4" style="display: flex; align-items: center; gap: 8px;">
                     <label for="txtSV" style="flex-shrink: 0; width: 40%;">SV</label>
-                    <input type="text" class="form-control" id="txtSV" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="text" class="form-control" ng-model="sv" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
                     <span style="flex-shrink: 0; color: #777;">mm</span>
                 </div>
             </div>
@@ -232,19 +232,19 @@
             <div class="row" style="display: flex; justify-content: space-between; margin-bottom: 15px;">
                 <div class="col-md-4" style="display: flex; align-items: center; gap: 8px;">
                     <label for="txtCO" style="flex-shrink: 0; width: 40%;">CO</label>
-                    <input type="text" class="form-control" id="txtCO" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="text" class="form-control" ng-model="CO" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
                     <span style="flex-shrink: 0; color: #777;">mm</span>
                 </div>
         
                 <div class="col-md-4" style="display: flex; align-items: center; gap: 8px;">
                     <label for="txtEDD" style="flex-shrink: 0; width: 40%;">EDD</label>
-                    <input type="text" class="form-control" id="txtEDD" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="text" class="form-control" ng-model="EDD" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
                     <span style="flex-shrink: 0; color: #777;">mm</span>
                 </div>
         
                 <div class="col-md-4" style="display: flex; align-items: center; gap: 8px;">
                     <label for="txtESD" style="flex-shrink: 0; width: 40%;">ESD</label>
-                    <input type="text" class="form-control" id="txtESD" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="text" class="form-control" ng-model="ESD" style="flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
                     <span style="flex-shrink: 0; color: #777;">mm</span>
                 </div>
             </div>
@@ -267,31 +267,31 @@
             <div class="row d-flex flex-wrap">
                 <div class="col-md-6 d-flex align-items-center mb-3">
                     <label class="me-2 fw-bold" for="txtRVFArea">RV Fractional Area:</label>
-                    <input type="text" class="form-control me-2" id="txtRVFArea">
+                    <input type="text" class="form-control me-2" ng-model="RVFArea">
                     <span>mm</span>
                 </div>
         
                 <div class="col-md-6 d-flex align-items-center mb-3">
                     <label class="me-2 fw-bold" for="txtRvotFrac">RVOT FRACTION:</label>
-                    <input type="text" class="form-control me-2" id="txtRvotFrac">
+                    <input type="text" class="form-control me-2" ng-model="RvotFrac">
                     <span>mm</span>
                 </div>
         
                 <div class="col-md-6 d-flex align-items-center mb-3">
                     <label class="me-2 fw-bold" for="txtFreeWall">FREE WALL:</label>
-                    <input type="text" class="form-control me-2" id="txtFreeWall">
+                    <input type="text" class="form-control me-2" ng-model="FreeWall">
                     <span>mm</span>
                 </div>
         
                 <div class="col-md-6 d-flex align-items-center mb-3">
                     <label class="me-2 fw-bold" for="txtRVEF">EF:</label>
-                    <input type="text" class="form-control me-2" id="txtRVEF">
+                    <input type="text" class="form-control me-2" ng-model="txtRVEF">
                     <span>%</span>
                 </div>
         
                 <div class="col-md-6 d-flex align-items-center mb-3">
                     <label class="me-2 fw-bold" for="txtTapse">TAPSE:</label>
-                    <input type="text" class="form-control me-2" id="txtTapse">
+                    <input type="text" class="form-control me-2" ng-model="Tapse">
                     <span>mm</span>
                 </div>
             </div>
