@@ -1,1118 +1,630 @@
-
-<form ng-submit="submitPatientReport()" name="patientReportForm" novalidate>
-
+<form ng-submit="submitPatientReport()" name="patientReportForm" id="patientReportForm">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
-    <style type="text/css">
-
-        @media print {
-            .navbar, footer, .no-print {
-                display: none !important;
-                visibility: hidden !important;
-            }
-       
-        .style1 {
-            font-weight: bold;
-            font-family: "Arial Black";
-            font-size: x-small;
-        }
-
-        .style2 {
-            text-decoration: underline;
-        }
-
-        .style3 {
-            font-family: "Arial Black";
-        }
-
-        .style4 {
-            font-weight: bold;
-            font-family: "Arial Black";
-            font-size: x-small;
-        }
-
-        .style5 {
-            font-family: "Arial Black";
-            font-size: small;
-        }
-
-        .style6 {
-            font-size: small;
-        }
-
-        .header {
-            width: 100%;
-        }
-
-        .whiteback {
-            height: auto;
-        }
-
-        .title {
-            text-align: center;
-            margin-top: 10px;
-        }
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Arial', sans-serif;
-        }
-        .container {
-            margin-top: 30px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .form-label {
-            font-weight: bold;
-        }
-        .table th {
-            background-color: #343a40;
-            color: white;
-        }
-        .table tbody td {
-            background-color: #fff;
-        }
-        .section-title {
-            font-weight: bold;
-            color: #343a40;
-            margin-bottom: 15px;
-        }
-    }
-    </style>
-
-    
-
-
-
     <div class="header">
-        
-        <div class="title">
-            
-            <h2>ECHOCARDIOGRAPHY REPORT</h2>
-        </div>
+      <div class="title">
+        <h2>ECHOCARDIOGRAPHY REPORT</h2>
+      </div>
     </div>
-
     <div class="container">
-        <center>
-            <b>
-                <span style="font-size: large;">Patient Report Details</span>
-            </b>
-        </center>
-    
-        <div class="container" style="background-color: white; font-size: 13px; border: outset">
-            <div class="row">
-                <center>
-                    <div class="col-md-1"></div>
-                </center>
-    
-                <center>
-                    <div class="col-md-4" style="padding-top: 1%">
-                        <div class="form-group form-inline">
-                            <div class="col-md-4">
-                                <label for="txtPatientID">Hospital No. :</label>
-                            </div>
-                            <div class="col-md-8">
-                                <input type="text" id="txtPatientID" style="width: 200px;" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col-md-4" style="padding-top: 1%">
-                        <div class="form-group form-inline">
-                            <div class="col-md-4">
-                                <label for="ddlDate">Date :</label>
-                            </div>
-                            <div class="col-md-8" style="margin-bottom: 21px;">
-                                <select id="ddlDate" style="width: 200px;" class="form-control">
-                                    <option>Select Date</option>
-                                    <!-- Add more date options here -->
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </center>
-            </div>
-    
-            <div class="row">
-                <div class="col-md-12" style="padding-top: 1%">
-                    <center>
-                        <div class="col-md-3"></div>
-                    </center>
-    
-                    <div class="col-md-6" style="padding-bottom: 12px" id="divButton">
-                        <center>
-                            <button type="button" style="height: 32px; background-color: #993300; color: white;" onclick="AddConfirmSubmit();">
-                                General Report
-                            </button>
-    
-                            <button type="button" style="height: 32px; width: 123px; background-color: #993300; color: white;" onclick="AddConfirmSubmit();">
-                                Detailed Report
-                            </button>
-                        </center>
-                    </div>
+      <center>
+        <b><span style="font-size: large;">Patient Report Details</span></b>
+      </center>
+      <div class="container" style="background-color: white; font-size: 13px; border: outset">
+        <div class="row">
+          <center>
+            <div class="col-md-1"></div>
+          </center>
+          <center>
+            <div class="col-md-4" style="padding-top: 1%">
+              <div class="form-group form-inline">
+                <div class="col-md-4">
+                  <label for="txtPatientID">Hospital No. :</label>
                 </div>
+                <div class="col-md-8">
+                  <input type="text" id="txtPatientID" style="width: 200px;" class="form-control">
+                </div>
+              </div>
             </div>
+            <div class="col-md-4" style="padding-top: 1%">
+              <div class="form-group form-inline">
+                <div class="col-md-4">
+                  <label for="ddlDate">Date :</label>
+                </div>
+                <div class="col-md-8" style="margin-bottom: 21px;">
+                  <select id="ddlDate" style="width: 200px;" class="form-control">
+                    <option>
+                      Select Date
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </center>
         </div>
+        <div class="row">
+          <div class="col-md-12" style="padding-top: 1%">
+            <center>
+              <div class="col-md-3"></div>
+            </center>
+            <div class="col-md-6" style="padding-bottom: 12px" id="divButton">
+              <center>
+                <button type="button" style="height: 32px; background-color: #993300; color: white;" onclick="AddConfirmSubmit();">General Report</button> <button type="button" style="height: 32px; width: 123px; background-color: #993300; color: white;" onclick="AddConfirmSubmit();">Detailed Report</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
     <script>
-        function AddConfirmSubmit() {
-            var uname = document.getElementById('txtPatientID').value;
-            var dname = document.getElementById('ddlDate').value;
-            if (uname === "" || dname === "Select Date") {
-                alert("Patient ID or Date Shouldn't be empty!");
-            }
-        }
-    </script>
-    
+          function AddConfirmSubmit() {
+              var uname = document.getElementById('txtPatientID').value;
+              var dname = document.getElementById('ddlDate').value;
+              if (uname === "" || dname === "Select Date") {
+                  alert("Patient ID or Date Shouldn't be empty!");
+              }
+          }
+    </script> 
     <script type="text/javascript">
-        function ViewPdf() {
-            window.open('stats/DisplayPdf.aspx', '_blank');
-        }
+  
+  
+          function ViewPdf() {
+              window.open('stats/DisplayPdf.aspx', '_blank');
+          }
     </script>
-
-
-    <!-- Bootstrap CSS for Responsive Design and Professional Look -->
-    
-    
-
-
     <div class="container">
-        <h2 class="text-center mb-4">Patient Information</h2>
-
-        <!-- Input Section -->
-        <div class="row mb-4">
-            <h5 class="section-title">Patient Details</h5>
-            <div class="col-md-4">
-                <label class="form-label" for="txtHospitalNo">Hospital No:</label>
-                <input type="text" id="txtHospitalNo" class="form-control" disabled placeholder="Hospital No" />
-            </div>
-            <div class="col-md-4">
-                <label class="form-label" for="txtDeptUnit">Dept Unit:</label>
-                <input type="text" id="txtDeptUnit" class="form-control" disabled placeholder="Dept Unit" />
-            </div>
-            <div class="col-md-4">
-                <label class="form-label" for="txtWardOpd">Ward/OPD:</label>
-                <input type="text" id="txtWardOpd" class="form-control" disabled placeholder="Ward/OPD" />
-            </div>
+      <h2 class="text-center mb-4">Patient Information</h2>
+      <div class="row mb-4">
+        <h5 class="section-title">Patient Details</h5>
+        <div class="col-md-4">
+          <label class="form-label" for="txtHospitalNo">Hospital No:</label> <input type="text" id="txtHospitalNo" class="form-control" disabled placeholder="Hospital No">
         </div>
-        <div class="row mb-4">
-            <div class="col-md-4">
-                <label class="form-label" for="txtPhoneNo">Phone No:</label>
-                <input type="text" id="txtPhoneNo" class="form-control" disabled placeholder="Phone No" />
-            </div>
-            <div class="col-md-4">
-                <label class="form-label" for="txtConsultantDocotor">Consultant Doctor:</label>
-                <input type="text" id="txtConsultantDocotor" class="form-control" disabled placeholder="Consultant Doctor" />
-            </div>
-            <div class="col-md-4">
-                <label class="form-label" for="txtQOAW">QOAW:</label>
-                <input type="text" id="txtQOAW" class="form-control" placeholder="QOAW" />
-            </div>
+        <div class="col-md-4">
+          <label class="form-label" for="txtDeptUnit">Dept Unit:</label> <input type="text" id="txtDeptUnit" class="form-control" disabled placeholder="Dept Unit">
         </div>
-        <div class="row mb-4">
-            <div class="col-md-4">
-                <label class="form-label" for="txtAge">Age:</label>
-                <input type="text" id="txtAge" class="form-control" disabled placeholder="Age" />
-            </div>
-            <div class="col-md-4">
-                <label class="form-label" for="txtSex">Sex:</label>
-                <input type="text" id="txtSex" class="form-control" placeholder="Sex" />
-            </div>
-            <div class="col-md-4">
-                <label class="form-label" for="txtName">Name:</label>
-                <input type="text" id="txtName" class="form-control" disabled placeholder="Name" />
-            </div>
+        <div class="col-md-4">
+          <label class="form-label" for="txtWardOpd">Ward/OPD:</label> <input type="text" id="txtWardOpd" class="form-control" disabled placeholder="Ward/OPD">
         </div>
-
-        <!-- Patient Info Table -->
-        <h5 class="section-title">Visit Details</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Hospital No</th>
-                        <th>Visit Date</th>
-                        <th>Patient Name</th>
-                        <th>Age</th>
-                        <th>Sex</th>
-                        <th>P ID</th>
-                        <th>Ward/Opd</th>
-                        <th>Department Name</th>
-                        <th>Consultant Doctor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>  </td>
-                        <td>   </td>
-                        <td></td>
-                        <td></td>
-                        <td>  </td>
-                        <td>     </td>
-                        <td>    </td>
-                        <td>   </td>
-                        <td>    </td>
-                    </tr>
-                </tbody>
-            </table>
+      </div>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <label class="form-label" for="txtPhoneNo">Phone No:</label> <input type="text" id="txtPhoneNo" class="form-control" disabled placeholder="Phone No">
         </div>
-
-        <!-- Additional Information -->
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <label class="form-label">Quality of Acoustic Window:</label>
-                <p id="lblqoaw1" class="form-control-plaintext">Good</p>
-            </div>
+        <div class="col-md-4">
+          <label class="form-label" for="txtConsultantDocotor">Consultant Doctor:</label> <input type="text" id="txtConsultantDocotor" class="form-control" disabled placeholder="Consultant Doctor">
         </div>
+        <div class="col-md-4">
+          <label class="form-label" for="txtQOAW">QOAW:</label> <input type="text" id="txtQOAW" class="form-control" placeholder="QOAW">
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <label class="form-label" for="txtAge">Age:</label> <input type="text" id="txtAge" class="form-control" disabled placeholder="Age">
+        </div>
+        <div class="col-md-4">
+          <label class="form-label" for="txtSex">Sex:</label> <input type="text" id="txtSex" class="form-control" placeholder="Sex">
+        </div>
+        <div class="col-md-4">
+          <label class="form-label" for="txtName">Name:</label> <input type="text" id="txtName" class="form-control" disabled placeholder="Name">
+        </div>
+      </div>
+      <h5 class="section-title">Visit Details</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Hospital No</th>
+              <th>Visit Date</th>
+              <th>Patient Name</th>
+              <th>Age</th>
+              <th>Sex</th>
+              <th>P ID</th>
+              <th>Ward/Opd</th>
+              <th>Department Name</th>
+              <th>Consultant Doctor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <label class="form-label">Quality of Acoustic Window:</label>
+          <p id="lblqoaw1" class="form-control-plaintext">Good</p>
+        </div>
+      </div>
     </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <div class="container">
-        <h2 class="text-center mb-4">Left and Right Atrium Information</h2>
-
-        <h5 class="section-title">Atrium Details</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th colspan="2" class="text-center">LEFT ATRIUM</th>
-                        <th colspan="2" class="text-center">RIGHT ATRIUM</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="fw-bold">A-P DIMENSION:</td>
-                        <td>
-                            <span id="lblLeftAPdimension">A-P DIMENSION :</span>
-                            <span id="lblleftap"></span>
-                            <span id="lblLeftAPrange">mm(19-40)</span>
-                        </td>
-                        <td class="fw-bold">A-P DIMENSION:</td>
-                        <td>
-                            <span id="lblRightAPdimension">A-P DIMENSION :</span>
-                            <span id="lblrightap"></span>
-                            <span id="lblRightAPrange">mm(19-40)</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">I-S DIMENSION:</td>
-                        <td>
-                            <span id="lblleftis"></span>
-                            <span id="lblLeftISrange">mm(&lt;50-55)</span>
-                        </td>
-                        <td class="fw-bold">I-S DIMENSION:</td>
-                        <td>
-                            <span id="lblrightis"></span>
-                            <span id="lblRightISrange">mm(&lt;50-55)</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">AREA:</td>
-                        <td>
-                            <span id="lbllefta"></span>
-                            <span id="lblLeftAreaUnit">cm</span>
-                        </td>
-                        <td class="fw-bold">AREA:</td>
-                        <td>
-                            <span id="lblrighta"></span>
-                            <span id="lblRightAreaUnit">cm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">VOLUME:</td>
-                        <td>
-                            <span id="lblleftv"></span>
-                            <span id="lblLeftVolumeUnit">ml</span>
-                        </td>
-                        <td class="fw-bold">VOLUME:</td>
-                        <td>
-                            <span id="lblrightv"></span>
-                            <span id="lblRightVolumeUnit">ml</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <div class="container">
-        <h2 class="text-center mb-4">LV and RV Information</h2>
-
-        <h5 class="section-title">Ventricle Details</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th colspan="2" class="text-center">LV</th>
-                        <th colspan="2" class="text-center">RV</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="fw-bold">IVS: S/D</td>
-                        <td>
-                            <span id="lblLVIVS"></span>
-                            <span>mm</span>
-                        </td>
-                        <td class="fw-bold">RV Fractional Area</td>
-                        <td>
-                            <span id="lblRVFractionalArea"></span>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">PW: S/D</td>
-                        <td>
-                            <span id="lblLVPW"></span>
-                            <span>mm</span>
-                        </td>
-                        <td class="fw-bold">RVOT Fraction</td>
-                        <td>
-                            <span id="lblRVOTFraction"></span>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">EDV</td>
-                        <td>
-                            <span id="lblLVEDV"></span>
-                            <span>ml</span>
-                        </td>
-                        <td class="fw-bold">Free Wall</td>
-                        <td>
-                            <span id="lblRVFreeWall"></span>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">ESV</td>
-                        <td>
-                            <span id="lblLVESV"></span>
-                            <span>ml</span>
-                        </td>
-                        <td class="fw-bold">EF</td>
-                        <td>
-                            <span id="lblRVEF"></span>
-                            <span>%</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">ALEF</td>
-                        <td>
-                            <span id="lblLVALEF"></span>
-                            <span>%</span>
-                        </td>
-                        <td class="fw-bold">TAPSE</td>
-                        <td>
-                            <span id="lblRVTAPSE"></span>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">SV</td>
-                        <td>
-                            <span id="lblLVSV"></span>
-                            <span>mm</span>
-                        </td>
-                        <td class="fw-bold">CO</td>
-                        <td>
-                            <span id="lblRVCO"></span>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <div class="container">
-        <h2 class="text-center mb-4">AORTA Information</h2>
-
-        <h5 class="section-title">AORTA Details</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th colspan="2" class="text-center">Measurement</th>
-                        <th colspan="2" class="text-center">Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="fw-bold">EDD:</td>
-                        <td>
-                            <span id="lbledd2">EDD</span>
-                        </td>
-                        <td>
-                            <span id="lbledd"></span>
-                        </td>
-                        <td>
-                            <span id="lbledd1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">ROOT:</td>
-                        <td>
-                            <span id="lblroot2">ROOT</span>
-                        </td>
-                        <td>
-                            <span id="lblroot"></span>
-                        </td>
-                        <td>
-                            <span id="lblroot1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">ESD:</td>
-                        <td>
-                            <span id="lblesd2">ESD</span>
-                        </td>
-                        <td>
-                            <span id="lblesd"></span>
-                        </td>
-                        <td>
-                            <span id="lblesd1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">SINOTUBULAR JUNCTION:</td>
-                        <td>
-                            <span id="lblsj2">SINOTUBULAR JUNCTION</span>
-                        </td>
-                        <td>
-                            <span id="lblsj"></span>
-                        </td>
-                        <td>
-                            <span id="lblsj1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">EF:</td>
-                        <td>
-                            <span id="lbllvef2">EF</span>
-                        </td>
-                        <td>
-                            <span id="lbllvef"></span>
-                        </td>
-                        <td>
-                            <span id="lbllvef1">%</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">ASCENDING AORTA:</td>
-                        <td>
-                            <span id="lblaa2">ASCENDING AORTA</span>
-                        </td>
-                        <td>
-                            <span id="lblaa"></span>
-                        </td>
-                        <td>
-                            <span id="lblaa1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">FS:</td>
-                        <td>
-                            <span id="lblfs2">FS</span>
-                        </td>
-                        <td>
-                            <span id="lblfs"></span>
-                        </td>
-                        <td>
-                            <span id="lblfs1">%</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">ARCH:</td>
-                        <td>
-                            <span id="lblarch2">ARCH</span>
-                        </td>
-                        <td>
-                            <span id="lblarch"></span>
-                        </td>
-                        <td>
-                            <span id="lblarch1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">HR:</td>
-                        <td>
-                            <span id="lblhr2">HR</span>
-                        </td>
-                        <td>
-                            <span id="lblhr"></span>
-                        </td>
-                        <td>
-                            <span id="lblhr1">bpm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">DESCENDING AORTA:</td>
-                        <td>
-                            <span id="lblda2">DESCENDING AORTA</span>
-                        </td>
-                        <td>
-                            <span id="lblda"></span>
-                        </td>
-                        <td>
-                            <span id="lblda1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">ABDOMINAL AORTA:</td>
-                        <td>
-                            <span>ABDOMINAL AORTA</span>
-                        </td>
-                        <td>
-                            <span id="lblaarota"></span>
-                        </td>
-                        <td>
-                            <span id="lblaarota1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">MACS:</td>
-                        <td>
-                            <span>MACS</span>
-                        </td>
-                        <td>
-                            <span id="lblmacs"></span>
-                        </td>
-                        <td>
-                            <span id="lblmacs1">mm</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <div class="container">
-        <h2 class="text-center mb-4">Valve Information</h2>
-
-        <h5 class="section-title">Valve Details</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered" style="font-size: smaller; font-family: 'Arial Black', sans-serif;">
-                <thead>
-                    <tr>
-                        <th colspan="2" class="text-center">Mitral Valve</th>
-                        <th colspan="2" class="text-center">Aortic Valve</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Row 1: DT and PV -->
-                    <tr>
-                        <td class="fw-bold">DT:</td>
-                        <td>
-                            <span id="lbldt"></span>
-                        </td>
-                        <td class="fw-bold">PV:</td>
-                        <td>
-                            <span id="lblpv"></span> m/s
-                        </td>
-                    </tr>
-                    <!-- Row 2: PV and MACS -->
-                    <tr>
-                        <td class="fw-bold">PV:</td>
-                        <td>
-                            <span id="lblmitralpv"></span> m/s
-                        </td>
-                        <td class="fw-bold">MACS:</td>
-                        <td>
-                            <span id="lblaorticmacs"></span> cm
-                        </td>
-                    </tr>
-                    <!-- Row 3: MV-E and PPG -->
-                    <tr>
-                        <td class="fw-bold">MV-E:</td>
-                        <td>
-                            <span id="lblmve"></span> m/s
-                        </td>
-                        <td class="fw-bold">PPG:</td>
-                        <td>
-                            <span id="lblappg"></span> mm
-                        </td>
-                    </tr>
-                    <!-- Row 4: MV-A and MPG -->
-                    <tr>
-                        <td class="fw-bold">MV-A:</td>
-                        <td>
-                            <span id="lblmva"></span> ml
-                        </td>
-                        <td class="fw-bold">MPG:</td>
-                        <td>
-                            <span id="lblampg"></span> mm
-                        </td>
-                    </tr>
-                    <!-- Row 5: IVRT and ET -->
-                    <tr>
-                        <td class="fw-bold">IVRT:</td>
-                        <td>
-                            <span id="lblivrt"></span> ml
-                        </td>
-                        <td class="fw-bold">ET:</td>
-                        <td>
-                            <span id="lblet"></span> ms
-                        </td>
-                    </tr>
-                    <!-- Row 6: IVCT and VTI -->
-                    <tr>
-                        <td class="fw-bold">IVCT:</td>
-                        <td>
-                            <span id="lblivct"></span> ml
-                        </td>
-                        <td class="fw-bold">VTI:</td>
-                        <td>
-                            <span id="lblvti"></span> cm
-                        </td>
-                    </tr>
-                    <!-- Row 7: MVO by PHT and Prosthetic Valve -->
-                    <tr>
-                        <td class="fw-bold">MVO by PHT:</td>
-                        <td>
-                            <span id="lblmvopht"></span> cm<sup>2</sup>
-                        </td>
-                        <td class="fw-bold">Prosthetic Valve:</td>
-                        <td>
-                            <span id="lblaorticprosthetic"></span>
-                        </td>
-                    </tr>
-                    <!-- Row 8: MVO by 2D ECHO -->
-                    <tr>
-                        <td class="fw-bold">MVO by 2D ECHO:</td>
-                        <td>
-                            <span id="lblmvo2d"></span> cm<sup>2</sup>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <!-- Row 9: Prosthetic Valve -->
-                    <tr>
-                        <td class="fw-bold">Prosthetic Valve:</td>
-                        <td>
-                            <span id="lblmitralprosthetic"></span>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- ============================================
-    =================================================
-    ================================================-->
-    <div class="container">
-        <h2 class="text-center mb-4">Tricuspid Valve Information</h2>
-
-        <h5 class="section-title">Tricuspid Valve Details</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th colspan="2" class="text-center">Measurement</th>
-                        <th colspan="2" class="text-center">Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="fw-bold" colspan="2">Tricuspid Valve</td>
-                        <td colspan="2" class="text-center">
-                            <span><b>Tricuspid Valve</b></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold" colspan="2">TRICUSPID ANNULUS DIMENSION</td>
-                        <td>
-                            <span id="lbltad"></span>
-                        </td>
-                        <td>
-                            <span id="lbltad1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">DT:</td>
-                        <td>
-                            <span id="lbltdt2">DT</span>
-                        </td>
-                        <td>
-                            <span id="lbltdt"></span>
-                        </td>
-                        <td>
-                            <span id="lbltdt1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">TRICUSPID VALVE AREA BY PHT:</td>
-                        <td>
-                            <span id="lbltva2">TRICUSPID VALVE AREA BY PHT</span>
-                        </td>
-                        <td>
-                            <span id="lbltva"></span>
-                        </td>
-                        <td>
-                            <span id="lbltva1">cm<sup>2</sup></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">PV:</td>
-                        <td>
-                            <span id="lbltpv">PV</span>
-                        </td>
-                        <td>
-                            <span id="lbltricuspidpv"></span>
-                        </td>
-                        <td>
-                            <span id="lbltricuspidpv1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">RV MPI:</td>
-                        <td>
-                            <span id="lblrvmpi2">RV MPI</span>
-                        </td>
-                        <td>
-                            <span id="lblrvmpi"></span>
-                        </td>
-                        <td>
-                            <span id="lblrvmpi1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">TV-E:</td>
-                        <td>
-                            <span id="lbltricuspidtve2">TV-E</span>
-                        </td>
-                        <td>
-                            <span id="lbltricuspidtve"></span>
-                        </td>
-                        <td>
-                            <span id="lbltricuspidtve1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">Prosthetic Valve:</td>
-                        <td colspan="3">
-                            <span id="lbltricuspidprosthetic"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">TV-A:</td>
-                        <td>
-                            <span id="lbltricuspidtva2">TV-A</span>
-                        </td>
-                        <td>
-                            <span id="lbltricuspidtva"></span>
-                        </td>
-                        <td>
-                            <span id="lbltricuspidtva1">mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">RVSP:</td>
-                        <td>
-                            <span id="lbltrvsp2">RVSP</span>
-                        </td>
-                        <td>
-                            <span id="lbltrvsp"></span>
-                        </td>
-                        <td>
-                            <span id="lbltrvsp1">+RAP mmHg</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS for Interactivity (Optional) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <div class="container">
-        <h2 class="text-center mb-4">Pulmonary Valve Information</h2>
-
-        <h5 class="section-title">Pulmonary Valve Details</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th colspan="2" class="text-center">Measurement</th>
-                        <th colspan="2" class="text-center">Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="fw-bold" colspan="2">Pulmonary Valve</td>
-                        <td colspan="2" class="text-center">
-                            <span><b>Pulmonary Valve</b></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold" colspan="2">PULMONARY DIMENSION</td>
-                        <td>
-                            <span></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">PV:</td>
-                        <td>
-                            <span>PV</span>
-                        </td>
-                        <td>
-                            <span></span>
-                        </td>
-                        <td>
-                            <span>m/s</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">AT:</td>
-                        <td>
-                            <span>AT</span>
-                        </td>
-                        <td>
-                            <span></span>
-                        </td>
-                        <td>
-                            <span>ms</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">PPG:</td>
-                        <td>
-                            <span>PPG</span>
-                        </td>
-                        <td>
-                            <span></span>
-                        </td>
-                        <td>
-                            <span>mmHg</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">MPG:</td>
-                        <td>
-                            <span>MPG</span>
-                        </td>
-                        <td>
-                            <span></span>
-                        </td>
-                        <td>
-                            <span>mmHg</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">Prosthetic Valve:</td>
-                        <td colspan="3">
-                            <span></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">Pulmonary Annulus:</td>
-                        <td>
-                            <span>Pulmonary Annulus</span>
-                        </td>
-                        <td>
-                            <span></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">MPA:</td>
-                        <td>
-                            <span>MPA</span>
-                        </td>
-                        <td>
-                            <span></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">LPA:</td>
-                        <td>
-                            <span>LPA</span>
-                        </td>
-                        <td>
-                            <span></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">RPA:</td>
-                        <td>
-                            <span>RPA</span>
-                        </td>
-                        <td>
-                            <span></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">VELOCITY-LPA:</td>
-                        <td>
-                            <span>VELOCITY-LPA</span>
-                        </td>
-                        <td>
-                            <span></span>
-                        </td>
-                        <td>
-                            <span>m/s</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">VELOCITY-RPA:</td>
-                        <td>
-                            <span>VELOCITY-RPA</span>
-                        </td>
-                        <td>
-                            <span></span>
-                        </td>
-                        <td>
-                            <span>m/s</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS for Interactivity (Optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <div class="container">
-        <h2 class="text-center mb-4">Pulmonary Venous Flow Information</h2>
-
-        <h5 class="section-title">Pulmonary Venous Flow Details</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th colspan="2" class="text-center">Measurement</th>
-                        <th colspan="2" class="text-center">Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="fw-bold" colspan="2">Pulmonary Venous Flow</td>
-                        <td colspan="2" class="text-center">
-                            <span><b>Pulmonary Venous Flow</b></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold" colspan="2">PULMONARY VEIN S</td>
-                        <td>
-                            <span id="pulmonaryVeinS"></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold" colspan="2">IVC-MAX/MIN</td>
-                        <td>
-                            <span id="ivcMaxMin"></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold" colspan="2">PULMONARY VEIN D</td>
-                        <td>
-                            <span id="pulmonaryVeinD"></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold" colspan="2">HEPATIC VEIN S</td>
-                        <td>
-                            <span id="hepaticVeinS"></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold" colspan="2">PULMONARY VEIN Ar</td>
-                        <td>
-                            <span id="pulmonaryVeinAr"></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold" colspan="2">HEPATIC VEIN D</td>
-                        <td>
-                            <span id="hepaticVeinD"></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold" colspan="2">PULMONARY VEIN Adur</td>
-                        <td>
-                            <span id="pulmonaryVeinAdur"></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold" colspan="2">REVERSAL FLOW VELOCITY</td>
-                        <td>
-                            <span id="reversalFlowVelocity"></span>
-                        </td>
-                        <td>
-                            <span>mm</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+      <h2 class="text-center mb-4">Left and Right Atrium Information</h2>
+      <h5 class="section-title">Atrium Details</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th colspan="2" class="text-center">LEFT ATRIUM</th>
+              <th colspan="2" class="text-center">RIGHT ATRIUM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold">A-P DIMENSION:</td>
+              <td><span id="lblLeftAPdimension">A-P DIMENSION :</span> <span id="lblleftap"></span> <span id="lblLeftAPrange">mm(19-40)</span></td>
+              <td class="fw-bold">A-P DIMENSION:</td>
+              <td><span id="lblRightAPdimension">A-P DIMENSION :</span> <span id="lblrightap"></span> <span id="lblRightAPrange">mm(19-40)</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">I-S DIMENSION:</td>
+              <td><span id="lblleftis"></span> <span id="lblLeftISrange">mm(&lt;50-55)</span></td>
+              <td class="fw-bold">I-S DIMENSION:</td>
+              <td><span id="lblrightis"></span> <span id="lblRightISrange">mm(&lt;50-55)</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">AREA:</td>
+              <td><span id="lbllefta"></span> <span id="lblLeftAreaUnit">cm</span></td>
+              <td class="fw-bold">AREA:</td>
+              <td><span id="lblrighta"></span> <span id="lblRightAreaUnit">cm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">VOLUME:</td>
+              <td><span id="lblleftv"></span> <span id="lblLeftVolumeUnit">ml</span></td>
+              <td class="fw-bold">VOLUME:</td>
+              <td><span id="lblrightv"></span> <span id="lblRightVolumeUnit">ml</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-
-    <!-- Bootstrap JS for Interactivity (Optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <div class="container">
+      <h2 class="text-center mb-4">LV and RV Information</h2>
+      <h5 class="section-title">Ventricle Details</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th colspan="2" class="text-center">LV</th>
+              <th colspan="2" class="text-center">RV</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold">IVS: S/D</td>
+              <td><span id="lblLVIVS"></span> <span>mm</span></td>
+              <td class="fw-bold">RV Fractional Area</td>
+              <td><span id="lblRVFractionalArea"></span> <span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">PW: S/D</td>
+              <td><span id="lblLVPW"></span> <span>mm</span></td>
+              <td class="fw-bold">RVOT Fraction</td>
+              <td><span id="lblRVOTFraction"></span> <span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">EDV</td>
+              <td><span id="lblLVEDV"></span> <span>ml</span></td>
+              <td class="fw-bold">Free Wall</td>
+              <td><span id="lblRVFreeWall"></span> <span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">ESV</td>
+              <td><span id="lblLVESV"></span> <span>ml</span></td>
+              <td class="fw-bold">EF</td>
+              <td><span id="lblRVEF"></span> <span>%</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">ALEF</td>
+              <td><span id="lblLVALEF"></span> <span>%</span></td>
+              <td class="fw-bold">TAPSE</td>
+              <td><span id="lblRVTAPSE"></span> <span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">SV</td>
+              <td><span id="lblLVSV"></span> <span>mm</span></td>
+              <td class="fw-bold">CO</td>
+              <td><span id="lblRVCO"></span> <span>mm</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+      <h2 class="text-center mb-4">AORTA Information</h2>
+      <h5 class="section-title">AORTA Details</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th colspan="2" class="text-center">Measurement</th>
+              <th colspan="2" class="text-center">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold">EDD:</td>
+              <td><span id="lbledd2">EDD</span></td>
+              <td><span id="lbledd"></span></td>
+              <td><span id="lbledd1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">ROOT:</td>
+              <td><span id="lblroot2">ROOT</span></td>
+              <td><span id="lblroot"></span></td>
+              <td><span id="lblroot1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">ESD:</td>
+              <td><span id="lblesd2">ESD</span></td>
+              <td><span id="lblesd"></span></td>
+              <td><span id="lblesd1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">SINOTUBULAR JUNCTION:</td>
+              <td><span id="lblsj2">SINOTUBULAR JUNCTION</span></td>
+              <td><span id="lblsj"></span></td>
+              <td><span id="lblsj1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">EF:</td>
+              <td><span id="lbllvef2">EF</span></td>
+              <td><span id="lbllvef"></span></td>
+              <td><span id="lbllvef1">%</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">ASCENDING AORTA:</td>
+              <td><span id="lblaa2">ASCENDING AORTA</span></td>
+              <td><span id="lblaa"></span></td>
+              <td><span id="lblaa1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">FS:</td>
+              <td><span id="lblfs2">FS</span></td>
+              <td><span id="lblfs"></span></td>
+              <td><span id="lblfs1">%</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">ARCH:</td>
+              <td><span id="lblarch2">ARCH</span></td>
+              <td><span id="lblarch"></span></td>
+              <td><span id="lblarch1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">HR:</td>
+              <td><span id="lblhr2">HR</span></td>
+              <td><span id="lblhr"></span></td>
+              <td><span id="lblhr1">bpm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">DESCENDING AORTA:</td>
+              <td><span id="lblda2">DESCENDING AORTA</span></td>
+              <td><span id="lblda"></span></td>
+              <td><span id="lblda1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">ABDOMINAL AORTA:</td>
+              <td><span>ABDOMINAL AORTA</span></td>
+              <td><span id="lblaarota"></span></td>
+              <td><span id="lblaarota1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">MACS:</td>
+              <td><span>MACS</span></td>
+              <td><span id="lblmacs"></span></td>
+              <td><span id="lblmacs1">mm</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+      <h2 class="text-center mb-4">Valve Information</h2>
+      <h5 class="section-title">Valve Details</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered" style="font-size: smaller; font-family: 'Arial Black', sans-serif;">
+          <thead>
+            <tr>
+              <th colspan="2" class="text-center">Mitral Valve</th>
+              <th colspan="2" class="text-center">Aortic Valve</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold">DT:</td>
+              <td><span id="lbldt"></span></td>
+              <td class="fw-bold">PV:</td>
+              <td><span id="lblpv"></span> m/s</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">PV:</td>
+              <td><span id="lblmitralpv"></span> m/s</td>
+              <td class="fw-bold">MACS:</td>
+              <td><span id="lblaorticmacs"></span> cm</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">MV-E:</td>
+              <td><span id="lblmve"></span> m/s</td>
+              <td class="fw-bold">PPG:</td>
+              <td><span id="lblappg"></span> mm</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">MV-A:</td>
+              <td><span id="lblmva"></span> ml</td>
+              <td class="fw-bold">MPG:</td>
+              <td><span id="lblampg"></span> mm</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">IVRT:</td>
+              <td><span id="lblivrt"></span> ml</td>
+              <td class="fw-bold">ET:</td>
+              <td><span id="lblet"></span> ms</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">IVCT:</td>
+              <td><span id="lblivct"></span> ml</td>
+              <td class="fw-bold">VTI:</td>
+              <td><span id="lblvti"></span> cm</td>
+            </tr>
+            <tr>
+              <td class="fw-bold">MVO by PHT:</td>
+              <td><span id="lblmvopht"></span> cm<sup>2</sup></td>
+              <td class="fw-bold">Prosthetic Valve:</td>
+              <td><span id="lblaorticprosthetic"></span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">MVO by 2D ECHO:</td>
+              <td><span id="lblmvo2d"></span> cm<sup>2</sup></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">Prosthetic Valve:</td>
+              <td><span id="lblmitralprosthetic"></span></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+      <h2 class="text-center mb-4">Tricuspid Valve Information</h2>
+      <h5 class="section-title">Tricuspid Valve Details</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th colspan="2" class="text-center">Measurement</th>
+              <th colspan="2" class="text-center">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold" colspan="2">Tricuspid Valve</td>
+              <td colspan="2" class="text-center"><span><b>Tricuspid Valve</b></span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold" colspan="2">TRICUSPID ANNULUS DIMENSION</td>
+              <td><span id="lbltad"></span></td>
+              <td><span id="lbltad1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">DT:</td>
+              <td><span id="lbltdt2">DT</span></td>
+              <td><span id="lbltdt"></span></td>
+              <td><span id="lbltdt1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">TRICUSPID VALVE AREA BY PHT:</td>
+              <td><span id="lbltva2">TRICUSPID VALVE AREA BY PHT</span></td>
+              <td><span id="lbltva"></span></td>
+              <td><span id="lbltva1">cm<sup>2</sup></span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">PV:</td>
+              <td><span id="lbltpv">PV</span></td>
+              <td><span id="lbltricuspidpv"></span></td>
+              <td><span id="lbltricuspidpv1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">RV MPI:</td>
+              <td><span id="lblrvmpi2">RV MPI</span></td>
+              <td><span id="lblrvmpi"></span></td>
+              <td><span id="lblrvmpi1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">TV-E:</td>
+              <td><span id="lbltricuspidtve2">TV-E</span></td>
+              <td><span id="lbltricuspidtve"></span></td>
+              <td><span id="lbltricuspidtve1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">Prosthetic Valve:</td>
+              <td colspan="3"><span id="lbltricuspidprosthetic"></span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">TV-A:</td>
+              <td><span id="lbltricuspidtva2">TV-A</span></td>
+              <td><span id="lbltricuspidtva"></span></td>
+              <td><span id="lbltricuspidtva1">mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">RVSP:</td>
+              <td><span id="lbltrvsp2">RVSP</span></td>
+              <td><span id="lbltrvsp"></span></td>
+              <td><span id="lbltrvsp1">+RAP mmHg</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+      <h2 class="text-center mb-4">Pulmonary Valve Information</h2>
+      <h5 class="section-title">Pulmonary Valve Details</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th colspan="2" class="text-center">Measurement</th>
+              <th colspan="2" class="text-center">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold" colspan="2">Pulmonary Valve</td>
+              <td colspan="2" class="text-center"><span><b>Pulmonary Valve</b></span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold" colspan="2">PULMONARY DIMENSION</td>
+              <td></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">PV:</td>
+              <td><span>PV</span></td>
+              <td></td>
+              <td><span>m/s</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">AT:</td>
+              <td><span>AT</span></td>
+              <td></td>
+              <td><span>ms</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">PPG:</td>
+              <td><span>PPG</span></td>
+              <td></td>
+              <td><span>mmHg</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">MPG:</td>
+              <td><span>MPG</span></td>
+              <td></td>
+              <td><span>mmHg</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">Prosthetic Valve:</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">Pulmonary Annulus:</td>
+              <td><span>Pulmonary Annulus</span></td>
+              <td></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">MPA:</td>
+              <td><span>MPA</span></td>
+              <td></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">LPA:</td>
+              <td><span>LPA</span></td>
+              <td></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">RPA:</td>
+              <td><span>RPA</span></td>
+              <td></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">VELOCITY-LPA:</td>
+              <td><span>VELOCITY-LPA</span></td>
+              <td></td>
+              <td><span>m/s</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold">VELOCITY-RPA:</td>
+              <td><span>VELOCITY-RPA</span></td>
+              <td></td>
+              <td><span>m/s</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+      <h2 class="text-center mb-4">Pulmonary Venous Flow Information</h2>
+      <h5 class="section-title">Pulmonary Venous Flow Details</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th colspan="2" class="text-center">Measurement</th>
+              <th colspan="2" class="text-center">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold" colspan="2">Pulmonary Venous Flow</td>
+              <td colspan="2" class="text-center"><span><b>Pulmonary Venous Flow</b></span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold" colspan="2">PULMONARY VEIN S</td>
+              <td><span id="pulmonaryVeinS"></span></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold" colspan="2">IVC-MAX/MIN</td>
+              <td><span id="ivcMaxMin"></span></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold" colspan="2">PULMONARY VEIN D</td>
+              <td><span id="pulmonaryVeinD"></span></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold" colspan="2">HEPATIC VEIN S</td>
+              <td><span id="hepaticVeinS"></span></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold" colspan="2">PULMONARY VEIN Ar</td>
+              <td><span id="pulmonaryVeinAr"></span></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold" colspan="2">HEPATIC VEIN D</td>
+              <td><span id="hepaticVeinD"></span></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold" colspan="2">PULMONARY VEIN Adur</td>
+              <td><span id="pulmonaryVeinAdur"></span></td>
+              <td><span>mm</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold" colspan="2">REVERSAL FLOW VELOCITY</td>
+              <td><span id="reversalFlowVelocity"></span></td>
+              <td><span>mm</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <div class="text-center mt-4 no-print">
-        <button class="btn btn-success" onclick="window.print()">Print as PDF</button>
+      <button class="btn btn-success" onclick="window.print()">Print as PDF</button>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
+  </form>
