@@ -158,485 +158,468 @@
             
         
         <!-- LV-RV section -->
-        <div class="container" style="background-color: white; font-size: 13px; border: outset; width: 80%; margin: 20px auto; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-            <div class="row">
-                <div class="col-md-12" style="padding-top: 1%;">
-                    <div class="form-group">
-                        <!-- Updated Header Design -->
-                        <div class="col-md-12" style="font-size: 20px; font-weight: 700; color: #333; padding-left: 300px;">
-                            LV
+            <div class="container" style="background-color: white; font-size: 13px; border: outset;">
+                <div class="row">
+                    <div class="col-md-12" style="padding-top: 1%;">
+                        <div class="form-group">
+                            <div class="col-md-12" style="font-size: 20px; font-weight: 700; color: #333; padding-left: 300px;">
+                                LV
+                            </div>
                         </div>
                     </div>
                 </div>
+            
+                <!-- Increased spacing between rows by using gy-4 for uniformity -->
+                <div class="row gx-3 gy-4">
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">IVS: S/D</label>
+                        <input type="text" class="form-control me-2" ng-model="ivsSd">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">PW: S/D</label>
+                        <input type="text" class="form-control me-2" ng-model="pwsd">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">EDV</label>
+                        <input type="text" class="form-control me-2" ng-model="edv">
+                        <span>ml</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">ESV</label>
+                        <input type="text" class="form-control me-2" ng-model="esv">
+                        <span>ml</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">ALEF</label>
+                        <input type="text" class="form-control me-2" ng-model="alef">
+                        <span>%</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">SV</label>
+                        <input type="text" class="form-control me-2" ng-model="sv">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">CO</label>
+                        <input type="text" class="form-control me-2" ng-model="CO">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">EDD</label>
+                        <input type="text" class="form-control me-2" ng-model="EDD">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">ESD</label>
+                        <input type="text" class="form-control me-2" ng-model="ESD">
+                        <span>mm</span>
+                    </div>
+                </div>
             </div>
-        
-            <!-- Increased spacing between rows using gy-4 for uniformity -->
-            <div class="row gx-3 gy-4">
-                <!-- Row 1 -->
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">IVS: S/D</label>
-                    <input type="text" class="form-control me-2" ng-model="ivsSd">
-                    <span>mm</span>
-                </div>
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 6%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">PW: S/D</label>
-                    <input type="text" class="form-control me-2" ng-model="pwsd">
-                    <span>mm</span>
-                </div>
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 6%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">EDV</label>
-                    <input type="text" class="form-control me-2" ng-model="edv">
-                    <span>ml</span>
-                </div>
-        
-                <!-- Row 2 -->
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 2%; padding-top: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">ESV</label>
-                    <input type="text" class="form-control me-2" ng-model="esv">
-                    <span>ml</span>
-                </div>
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 6%; padding-top: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">ALEF</label>
-                    <input type="text" class="form-control me-2" ng-model="alef">
-                    <span>%</span>
-                </div>
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 6%; padding-top: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">SV</label>
-                    <input type="text" class="form-control me-2" ng-model="sv">
-                    <span>mm</span>
-                </div>
-        
-                <!-- Row 3 -->
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 2%; padding-top: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">CO</label>
-                    <input type="text" class="form-control me-2" ng-model="CO">
-                    <span>mm</span>
-                </div>
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 6%; padding-top: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">EDD</label>
-                    <input type="text" class="form-control me-2" ng-model="EDD">
-                    <span>mm</span>
-                </div>
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 6%; padding-top: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">ESD</label>
-                    <input type="text" class="form-control me-2" ng-model="ESD">
-                    <span>mm</span>
-                </div>
-            </div>
-        </div>
-        
+            
         
         <!-- ================================================================================================================== -->
-        <div class="container" style="background-color: white; font-size: 13px; border: outset;">
-            <div class="row">
-                <div class="col-md-12" style="padding-top: 1%;">
-                    <div class="form-group">
-                        <div class="col-md-12" style="font-size: 20px; font-weight: 700; color: #333; padding-left: 300px;">
-                            RV
+            <div class="container" style="background-color: white; font-size: 13px; border: outset;">
+                <div class="row">
+                    <div class="col-md-12" style="padding-top: 1%;">
+                        <div class="form-group">
+                            <div class="col-md-12" style="font-size: 20px; font-weight: 700; color: #333; padding-left: 300px;">
+                                RV
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        
-            <!-- Increased spacing between rows by changing gy-1 to gy-4 -->
-            <div class="row gx-3 gy-4">
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
-                    <label class="me-2 fw-bold" for="txtRVFArea" style="text-decoration: none;">RV Fractional Area:</label>
-                    <input type="text" class="form-control me-2" ng-model="RVFArea">
-                    <span>mm</span>
-                </div>
-        
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
-                    <label class="me-2 fw-bold" for="txtRvotFrac" style="text-decoration: none;">RVOT FRACTION:</label>
-                    <input type="text" class="form-control me-2" ng-model="RvotFrac">
-                    <span>mm</span>
-                </div>
-        
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
-                    <label class="me-2 fw-bold" for="txtFreeWall" style="text-decoration: none;">FREE WALL:</label>
-                    <input type="text" class="form-control me-2" ng-model="FreeWall">
-                    <span>mm</span>
-                </div>
-        
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
-                    <label class="me-2 fw-bold" for="txtRVEF" style="text-decoration: none;">EF:</label>
-                    <input type="text" class="form-control me-2" ng-model="txtRVEF">
-                    <span>%</span>
-                </div>
-        
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
-                    <label class="me-2 fw-bold" for="txtTapse" style="text-decoration: none;">TAPSE:</label>
-                    <input type="text" class="form-control me-2" ng-model="Tapse">
-                    <span>mm</span>
-                </div>
-            </div>
-        </div>
-        
-        
-        <div class="container" style="background-color: white; font-size: 13px; border: outset; width: 80%; margin: 20px auto; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-            <div class="row">
-                <div class="col-md-12" style="padding-top: 1%;">
-                    <div class="form-group">
-                        <!-- Updated Header Design -->
-                        <div class="col-md-12" style="font-size: 20px; font-weight: 700; color: #333; padding-left: 300px;">
-                            AORTA
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Increased spacing between rows by using gy-4 -->
-            <div class="row gx-3 gy-4">
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 2%;">
-                    <label class="me-2 fw-bold" for="txtRoot" style="text-decoration: none;">ROOT:</label>
-                    <input type="text" class="form-control me-2" ng-model="Root">
-                    <span>mm</span>
-                </div>
-        
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;">
-                    <label class="me-2 fw-bold" for="txtSinJunction" style="text-decoration: none;">SINOTUBULAR JUNCTION:</label>
-                    <input type="text" class="form-control me-2" ng-model="SinJunction">
-                    <span>mm</span>
-                </div>
-        
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;">
-                    <label class="me-2 fw-bold" for="txtAscAorta" style="text-decoration: none;">ASCENDING AORTA:</label>
-                    <input type="text" class="form-control me-2" ng-model="AscAorta">
-                    <span>mm</span>
-                </div>
-        
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 2%;padding-top: 2%;">
-                    <label class="me-2 fw-bold" for="txtArch" style="text-decoration: none;">ARCH:</label>
-                    <input type="text" class="form-control me-2" ng-model="Arch">
-                    <span>mm</span>
-                </div>
-        
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;padding-top: 2%;">
-                    <label class="me-2 fw-bold" for="txtDesAorta" style="text-decoration: none;">DESCENDING AORTA:</label>
-                    <input type="text" class="form-control me-2" ng-model="DesAorta">
-                    <span>mm</span>
-                </div>
-        
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;padding-top: 2%;">
-                    <label class="me-2 fw-bold" for="txtAbdAorta" style="text-decoration: none;">ABDOMINAL AORTA:</label>
-                    <input type="text" class="form-control me-2" ng-model="AbdAorta">
-                    <span>mm</span>
-                </div>
-        
-                <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 2%;padding-top: 2%;">
-                    <label class="me-2 fw-bold" for="txtMacs" style="text-decoration: none;">MACS:</label>
-                    <input type="text" class="form-control me-2" ng-model="Macs">
-                    <span>mm</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ===============================MITRAL VALUE AORTIC VALVE============== -->
-
-        <div class="container" style="background-color: white; font-size: 13px; border: outset; width: 80%; margin: 20px auto; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-            <div class="row">
-                <div class="col-md-12" style="padding-top: 1%;">
-                    <div class="form-group">
-                        <div class="col-md-12" style="font-size: 20px; font-weight: 700; color: #333; text-align: center;">
-                            MITRAL VALVE
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Row 1 -->
-            <div class="row gx-3 gy-4">
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">DT:</label>
-                    <select class="form-control" style="width: 70%;" ng-model="patient.wardOpd">
-                        <option value="">Select</option>
-                        <option value="E>A">E>A</option>
-                        <option value="A>E">A>E</option>
-                        <option value="E>>A">E>>A</option>
-                        <option value="E=A">E=A</option>
-                        <option value="E only">E only</option>
-                    </select>
-                </div>
-        
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">PV:</label>
-                    <input type="text" class="form-control" style="width: 70%;" ng-model="PV">
-                </div>
-        
-                <div class="col-md-4 d-flex align-items-center mb-3" >
-                    <label class="me-2 fw-bold" style="text-decoration: none;">MV-E:</label>
-                    <input type="text" class="form-control" style="width: 70%;" ng-model="MVE">
-                </div>
-            </div>
-        
-            <!-- Row 2 -->
-            <div class="row gx-3 gy-4">
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">IVRT:</label>
-                    <input type="text" class="form-control" style="width: 70%;" ng-model="IVRT">
-                </div>
-        
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 6%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">IVCT:</label>
-                    <input type="text" class="form-control" style="width: 70%;" ng-model="IVCT">
-                </div>
-        
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 6%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">MVO by PHT:</label>
-                    <input type="text" class="form-control" style="width: 70%;" ng-model="MVObyPHT">
-                </div>
-            </div>
-        
-            <!-- Row 3 -->
-            <div class="row gx-3 gy-4">
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">MVO by 2D ECHO:</label>
-                    <input type="text" class="form-control" style="width: 70%;" ng-model="MVObyECHO">
-                </div>
-        
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 6%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">MPG:</label>
-                    <input type="text" class="form-control" style="width: 70%;" ng-model="MIMPG">
-                </div>
-        
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 6%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">PPG:</label>
-                    <input type="text" class="form-control" style="width: 70%;" ng-model="MIPPG">
-                </div>
-            </div>
-        
-            <!-- Row 4 -->
-            <div class="row gx-3 gy-4">
-                <div class="col-md-4 d-flex align-items-center mb-3" style="padding-left: 2%;">
-                    <label class="me-2 fw-bold" style="text-decoration: none;">Prosthetic Valve:</label>
-                    <input type="text" class="form-control" style="width: 70%;" ng-model="MVPros">
-                </div>
-            </div>
-        </div>
-        
-        
-
-        <div class="container" style="background-color: white; font-size: 13px; border: outset; padding: 20px; margin-top: 20px;">
             
-            <div class="row">
-                <div class="col-md-12" style="padding-top: 1%;">
-                    <div class="form-group">
-                        <div class="col-md-12" style="font-size: 20px; font-weight: 700; color: #333; text-align: center;">
-                            AORTIC VALVE
-                        </div>
+                <!-- Increased spacing between rows by changing gy-1 to gy-4 -->
+                <div class="row gx-3 gy-4">
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" for="txtRVFArea" style="text-decoration: none;">RV Fractional Area:</label>
+                        <input type="text" class="form-control me-2" ng-model="RVFArea">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" for="txtRvotFrac" style="text-decoration: none;">RVOT FRACTION:</label>
+                        <input type="text" class="form-control me-2" ng-model="RvotFrac">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" for="txtFreeWall" style="text-decoration: none;">FREE WALL:</label>
+                        <input type="text" class="form-control me-2" ng-model="FreeWall">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
+                        <label class="me-2 fw-bold" for="txtRVEF" style="text-decoration: none;">EF:</label>
+                        <input type="text" class="form-control me-2" ng-model="txtRVEF">
+                        <span>%</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;padding-top: 2%;">
+                        <label class="me-2 fw-bold" for="txtTapse" style="text-decoration: none;">TAPSE:</label>
+                        <input type="text" class="form-control me-2" ng-model="Tapse">
+                        <span>mm</span>
                     </div>
                 </div>
             </div>
-        
-            <div class="row gx-3 gy-2" style="padding: 10px;">
-                <!-- PV -->
-                <div class="col-md-4 d-flex align-items-center">
-                    <label class="me-2 fw-bold">PV:</label>
-                    <input type="text" class="form-control" ng-model="AOPV" style="width: 60%;"/>
+            
+            
+            <div class="container" style="background-color: white; font-size: 13px; border: outset; width: 80%; margin: 20px auto; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                <div class="row">
+                    <div class="col-md-12" style="padding-top: 1%;">
+                        <div class="form-group">
+                            <!-- Updated Header Design -->
+                            <div class="col-md-12" style="font-size: 20px; font-weight: 700; color: #333; padding-left: 300px;">
+                                AORTA
+                            </div>
+                        </div>
+                    </div>
                 </div>
-        
-                <!-- MACS -->
-                <div class="col-md-4 d-flex align-items-center">
-                    <label class="me-2 fw-bold">MACS:</label>
-                    <input type="text" class="form-control" ng-model="AOMacs" style="width: 60%;"/>
-                </div>
-        
-                <!-- PPG -->
-                <div class="col-md-4 d-flex align-items-center">
-                    <label class="me-2 fw-bold">PPG:</label>
-                    <input type="text" class="form-control" ng-model="AOPPG" style="width: 60%;"/>
+            
+                <!-- Increased spacing between rows by using gy-4 -->
+                <div class="row gx-3 gy-4">
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 2%;">
+                        <label class="me-2 fw-bold" for="txtRoot" style="text-decoration: none;">ROOT:</label>
+                        <input type="text" class="form-control me-2" ng-model="Root">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;">
+                        <label class="me-2 fw-bold" for="txtSinJunction" style="text-decoration: none;">SINOTUBULAR JUNCTION:</label>
+                        <input type="text" class="form-control me-2" ng-model="SinJunction">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;">
+                        <label class="me-2 fw-bold" for="txtAscAorta" style="text-decoration: none;">ASCENDING AORTA:</label>
+                        <input type="text" class="form-control me-2" ng-model="AscAorta">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 2%;padding-top: 2%;">
+                        <label class="me-2 fw-bold" for="txtArch" style="text-decoration: none;">ARCH:</label>
+                        <input type="text" class="form-control me-2" ng-model="Arch">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;padding-top: 2%;">
+                        <label class="me-2 fw-bold" for="txtDesAorta" style="text-decoration: none;">DESCENDING AORTA:</label>
+                        <input type="text" class="form-control me-2" ng-model="DesAorta">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 6%;padding-top: 2%;">
+                        <label class="me-2 fw-bold" for="txtAbdAorta" style="text-decoration: none;">ABDOMINAL AORTA:</label>
+                        <input type="text" class="form-control me-2" ng-model="AbdAorta">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 2%;padding-top: 2%;">
+                        <label class="me-2 fw-bold" for="txtMacs" style="text-decoration: none;">MACS:</label>
+                        <input type="text" class="form-control me-2" ng-model="Macs">
+                        <span>mm</span>
+                    </div>
                 </div>
             </div>
-        
-            <div class="row gx-3 gy-2" style="padding: 10px;">
-                <!-- MPG -->
-                <div class="col-md-4 d-flex align-items-center">
-                    <label class="me-2 fw-bold">MPG:</label>
-                    <input type="text" class="form-control" ng-model="AOMPG" style="width: 60%;"/>
-                </div>
-        
-                <!-- ET -->
-                <div class="col-md-4 d-flex align-items-center">
-                    <label class="me-2 fw-bold">ET:</label>
-                    <input type="text" class="form-control" ng-model="AOET" style="width: 60%;"/>
-                </div>
-        
-                <!-- VTI -->
-                <div class="col-md-4 d-flex align-items-center">
-                    <label class="me-2 fw-bold">VTI:</label>
-                    <input type="text" class="form-control" ng-model="AOVTI" style="width: 60%;".>
-                </div>
-            </div>
-        
-            <div class="row gx-3 gy-2" style="padding: 10px;">
-                <!-- Prosthetic Valve -->
-                <div class="col-md-4 d-flex align-items-center">
-                    <label class="me-2 fw-bold">Prosthetic Valve:</label>
-                    <input type="text" class="form-control" ng-model="AOProcs" style="width: 60%;"/>
-                </div>
-            </div>
-        </div>
-        
+            
+            <!-- ===============================MITRAL VALUE AORTIC VALVE============== -->
 
+            <div class="container" style="background-color: white; font-size: 13px; border: outset;">
+                <div class="row">
+                    <div class="col-md-12" style="padding-top: 1%;">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center" style="font-size: 20px; font-weight: 700; color: #333; white-space: nowrap;padding-left: 500%;">
+                                MITRAL VALVE
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Increased spacing between rows by using gy-4 for uniformity -->
+                <div class="row gx-3 gy-4">
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">DT:</label>
+                        <select class="form-control me-2" ng-model="patient.wardOpd">
+                            <option value="">Select</option>
+                            <option value="E>A">E>A</option>
+                            <option value="A>E">A>E</option>
+                            <option value="E>>A">E>>A</option>
+                            <option value="E=A">E=A</option>
+                            <option value="E only">E only</option>
+                        </select>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">PV:</label>
+                        <input type="text" class="form-control me-2" ng-model="PV">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">MV-E:</label>
+                        <input type="text" class="form-control me-2" ng-model="MVE">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">IVRT:</label>
+                        <input type="text" class="form-control me-2" ng-model="IVRT">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">IVCT:</label>
+                        <input type="text" class="form-control me-2" ng-model="IVCT">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">MVO by PHT:</label>
+                        <input type="text" class="form-control me-2" ng-model="MVObyPHT">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">MVO by 2D ECHO:</label>
+                        <input type="text" class="form-control me-2" ng-model="MVObyECHO">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">MPG:</label>
+                        <input type="text" class="form-control me-2" ng-model="MIMPG">
+                        <span>mmHg</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">PPG:</label>
+                        <input type="text" class="form-control me-2" ng-model="MIPPG">
+                        <span>mmHg</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">Prosthetic Valve:</label>
+                        <input type="text" class="form-control me-2" ng-model="MVPros">
+                        <span>Type</span>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="container" style="background-color: white; font-size: 13px; border: outset;">
+                <div class="row">
+                    <div class="col-md-12" style="padding-top: 1%;">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center" style="font-size: 20px; font-weight: 700; color: #333; white-space: nowrap;padding-left: 500%;">
+                                AORTIC VALVE
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Increased spacing between rows by using gy-4 for uniformity -->
+                <div class="row gx-3 gy-4">
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">AVA:</label>
+                        <input type="text" class="form-control me-2" ng-model="AVA">
+                        <span>cm²</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">Vmax:</label>
+                        <input type="text" class="form-control me-2" ng-model="Vmax">
+                        <span>m/s</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">PG:</label>
+                        <input type="text" class="form-control me-2" ng-model="PG">
+                        <span>mmHg</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">AI Grade:</label>
+                        <select class="form-control me-2" ng-model="AIG">
+                            <option value="">Select</option>
+                            <option value="Mild">Mild</option>
+                            <option value="Moderate">Moderate</option>
+                            <option value="Severe">Severe</option>
+                        </select>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">AI Jet Width:</label>
+                        <input type="text" class="form-control me-2" ng-model="AIJetWidth">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%; padding-top: 2%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">AI PHT:</label>
+                        <input type="text" class="form-control me-2" ng-model="AIPHT">
+                        <span>ms</span>
+                    </div>
+                </div>
+            </div>
+            
         <!-- ================================TRICUSPID VALVE==================================== -->
-        <div class="container" style="background-color: white; font-size: 13px; border: outset; padding: 10px;">
-            <div class="row">
-                <div class="col-md-12" style="padding-top: 1%;">
-                    <div class="form-group form-inline">
-                        <div class="col-md-12" style="font-size: 20px; font-weight: 700; color: #333; padding-left: 300px; white-space: nowrap;">
-                            TRICUSPID VALVE
+            <div class="container" style="background-color: white; font-size: 13px; border: outset;">
+                <div class="row">
+                    <div class="col-md-12" style="padding-top: 1%;">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center" style="font-size: 20px; font-weight: 700; color: #333; white-space: nowrap;padding-left: 300%;">
+                                TRICUSPID VALVE
+                            </div>
                         </div>
+                    </div>
+                </div>
+            
+                <!-- Increased spacing between rows by using gy-4 for uniformity -->
+                <div class="row gx-3 gy-4">
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">DT:</label>
+                        <input type="text" class="form-control me-2" ng-model="TRDT">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">TRICUSPID ANNULUS DIMENSION:</label>
+                        <input type="text" class="form-control me-2" ng-model="TRANNDIM">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">PV:</label>
+                        <input type="text" class="form-control me-2" ng-model="TRPV">
+                        <span>m/s</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">TRICUSPID VALVE AREA BY PHT:</label>
+                        <input type="text" class="form-control me-2" ng-model="TRVALAR">
+                        <span>cm<sup>2</sup></span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">TV-E:</label>
+                        <input type="text" class="form-control me-2" ng-model="TRTVE">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">RV MPI:</label>
+                        <input type="text" class="form-control me-2" ng-model="TRRVMPI">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">TV-A:</label>
+                        <input type="text" class="form-control me-2" ng-model="TRTVA">
+                        <span>mm</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">MPG:</label>
+                        <input type="text" class="form-control me-2" ng-model="TRMPG">
+                        <span>mmHg</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">PPG:</label>
+                        <input type="text" class="form-control me-2" ng-model="TRPPG">
+                        <span>mmHg</span>
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">Prosthetic Valve:</label>
+                        <input type="text" class="form-control me-2" ng-model="TRPROS">
+                    </div>
+            
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">RVSP=</label>
+                        <input type="text" class="form-control me-2" ng-model="TRRVSP">
+                        <span>+RAP mmHg</span>
                     </div>
                 </div>
             </div>
             
-        
-            <div class="row">
-                <!-- DT -->
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtTRDT">DT:</label>
-                    <input class="form-control" type="text" ng-model="TRDT"/>
-                    <span>mm</span>
-                </div>
-        
-                <!-- TRICUSPID ANNULUS DIMENSION -->
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtTRANNDIM">TRICUSPID ANNULUS DIMENSION:</label>
-                    <input class="form-control" type="text" ng-model="TRANNDIM"/>
-                    <span>mm</span>
-                </div>
-        
-                <!-- PV -->
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtTRPV">PV:</label>
-                    <input class="form-control" type="text" ng-model="TRPV"/>
-                    <span>m/s</span>
-                </div>
-        
-                <!-- TRICUSPID VALVE AREA BY PHT -->
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtTRVALAR">TRICUSPID VALVE AREA BY PHT:</label>
-                    <input class="form-control" type="text" ng-model="TRVALAR"/>
-                    <span>cm<sup>2</sup></span>
-                </div>
-        
-                <!-- TV-E -->
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtTRTVE">TV-E:</label>
-                    <input class="form-control" type="text" ng-model="TRTVE"/>
-                    <span>mm</span>
-                </div>
-        
-                <!-- RV MPI -->
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="TxtTRRVMPI">RV MPI:</label>
-                    <input class="form-control" type="text" ng-model="TRRVMPI"/>
-                    <span>mm</span>
-                </div>
-        
-                <!-- TV-A -->
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtTRTVA">TV-A:</label>
-                    <input class="form-control" type="text" ng-model="TRTVA"/>
-                    <span>mm</span>
-                </div>
-        
-                <!-- MPG -->
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtTRMPG">MPG:</label>
-                    <input class="form-control" type="text" ng-model="TRMPG"/>
-                    <span>mmHg</span>
-                </div>
-        
-                <!-- PPG -->
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtTRPPG">PPG:</label>
-                    <input class="form-control" type="text" ng-model="TRPPG"/>
-                    <span>mmHg</span>
-                </div>
-        
-                <!-- Prosthetic Valve -->
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtTRPROS">Prosthetic Valve:</label>
-                    <input class="form-control" type="text" ng-model="TRPROS"/>
-                </div>
-        
-                <!-- RVSP -->
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtTRRVSP">RVSP=</label>
-                    <input class="form-control" type="text" ng-model="TRRVSP"/>
-                    <span>+RAP mmHg</span>
-                </div>
-            </div>
-        </div>
-        
-
         <!-- =======================PULMONARY VALVE=========================== -->
         <!-- Pulmonary Valve and RAP Sections -->
 <!-- Pulmonary Valve Section -->
-        <div class="container" style="background-color: white; font-size: 13px; border: outset; padding: 10px;">
-            <div class="row">
-                <div class="col-md-12" style="padding-top: 1%;">
-                    <div class="form-group form-inline">
-                        <div class="col-md-12" style="font-size: 20px; font-weight: 700; color: #333; padding-left: 300px; white-space: nowrap;">
-                            PULMONARY VALVE
+            <div class="container" style="background-color: white; font-size: 13px; border: outset;">
+                <div class="row">
+                    <div class="col-md-12" style="padding-top: 1%;">
+                        <div class="form-group">
+                            <div class="col-md-12 text-center" style="font-size: 20px; font-weight: 700; color: #333; white-space: nowrap;padding-left: 300%;">
+                                PULMONARY VALVE
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Consistent spacing between rows using gy-4 -->
+                <div class="row gx-3 gy-4">
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">Pulmonary Annulus:</label>
+                        <input type="text" class="form-control me-2" ng-model="PULAN">
+                        <span>mm</span>
+                    </div>
+
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">PV:</label>
+                        <input type="text" class="form-control me-2" ng-model="PULPV">
+                        <span>m/s</span>
+                    </div>
+
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">Remarks:</label>
+                        <input type="text" class="form-control me-2" ng-model="PULRemark">
+                    </div>
+
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">Pulmonary Dimension:</label>
+                        <input type="text" class="form-control me-2" ng-model="PULDI">
+                        <span>mm</span>
+                    </div>
+
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">AT:</label>
+                        <input type="text" class="form-control me-2" ng-model="PULAT">
+                        <span>ms</span>
+                    </div>
+
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">Condition:</label>
+                        <select class="form-select me-2" ng-model="selPUL">
+                            <option value="">Select Condition</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Abnormal">Abnormal</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">MPA:</label>
+                        <input type="text" class="form-control me-2" ng-model="PULMPA">
+                        <span>mm</span>
+                    </div>
+
+                    <div class="col-md-6 d-flex align-items-center mb-3" style="padding-left: 4%;">
+                        <label class="me-2 fw-bold" style="text-decoration: none;">PPG:</label>
+                        <input type="text" class="form-control me-2" ng-model="PPG">
+                        <span>mmHg</span>
+                    </div>
+                </div>
             </div>
-            
-            <div class="row">
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtPULAN">Pulmonary Annulus:</label>
-                    <input type="text" class="form-control" ng-model="PULAN"/>
-                    <span>mm</span>
-                </div>
-
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtPULPV">PV:</label>
-                    <input type="text" class="form-control" ng-model="PULPV"/>
-                    <span>m/s</span>
-                </div>
-
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtPULRemark">Remarks:</label>
-                    <input type="text" class="form-control" ng-model="PULRemark"/>
-                </div>
-
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtPULDI">Pulmonary Dimension:</label>
-                    <input type="text" class="form-control" ng-model="PULDI"/>
-                    <span>mm</span>
-                </div>
-
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtPULAT">AT:</label>
-                    <input type="text" class="form-control" ng-model="PULAT"/>
-                    <span>ms</span>
-                </div>
-
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="selPUL">Condition:</label>
-                    <select class="form-select" ng-model="selPUL">
-                        <option value="">Select Condition</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Abnormal">Abnormal</option>
-                    </select>
-                </div>
-
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtPULMPA">MPA:</label>
-                    <input type="text" class="form-control" ng-model="PULMPA"/>
-                    <span>mm</span>
-                </div>
-
-                <div class="col-md-4" style="padding-top: 1%;">
-                    <label for="txtPPG">PPG:</label>
-                    <input type="text" class="form-control" ng-model="PPG"/>
-                    <span>mmHg</span>
-                </div>
-            </div>
-        </div>
 
         <!-- RAP Section -->
         <div class="container" style="background-color: white; font-size: 13px; border: outset; padding: 10px; margin-top: 20px;">
